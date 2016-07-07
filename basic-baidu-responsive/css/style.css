@@ -1,0 +1,995 @@
+html,
+body {
+	height: 100%;
+}
+
+/*字体图标引用*/
+
+@font-face {
+	font-family: 'iconfont';
+	src: url('../fonts/icomoon.eot');
+	src: url('../fonts/icomoon.eot#iefix') format('embedded-opentype'), url('../fonts/icomoon.ttf') format('truetype'), url('../fonts/icomoon.woff') format('woff'), url('../fonts/icomoon.svg#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+/*清除浮动*/
+
+.clear-fix {
+	*overflow: hidden;
+	*zoom: 1;
+}
+.clear-fix:after {
+	display: table;
+	content: "";
+	width: 0;
+	clear: both;
+}
+
+/*手机图标引用*/
+
+.phone-icon {
+	font-style: normal;
+	font-family: iconfont;
+	-webkit-font-smoothing: antialiased;
+	-webkit-text-stroke-width: .2px;
+}
+
+.container {
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+
+
+/* 网站头部 */
+
+.header {
+	padding-bottom: 10px;
+}
+
+
+/*手机屏幕最大宽度设置767px*/
+
+@media (max-width: 767px) {
+	body {
+		background: #EEEFEF;
+	}
+	.container {
+		min-height: 570px;
+	}
+	/*手机 顶部天气*/
+	.weather-wrap {
+		float: left;
+		height: 40px;
+		line-height: 40px;
+		padding: 0 6px;
+	}
+	.weather-icon {
+		float: left;
+		font-size: 2.8rem;
+		color: #b7babe;
+	}
+	.weather-icon:before {
+		content: '\e606';
+	}
+	.weather-number {
+		float: left;
+		font-size: 2rem;
+		color: #8c8c8c;
+		padding-left: 7px;
+	}
+	.weather-address {
+		float: left;
+		padding: 7px 2px 0 7px;
+	}
+	.weather-address p {
+		height: 13px;
+		line-height: 13px;
+		font-size: 1.1rem;
+		color: #999;
+	}
+	.weather-more-icon {
+		float: left;
+		padding-top: 5px;
+	}
+	.weather-more-icon:before {
+		content: '\e814';
+		color: #b6b7ba;
+		font-size: 1.7rem;
+	}
+	/*手机 顶部用户*/
+	.user-wrap {
+		float: right;
+		height: 40px;
+		margin-right: 8px;
+	}
+	.user-wrap a {
+		padding: 8px;
+		color: #666;
+		font-size: 2.4rem;
+	}
+	.user-wrap .user-icon:before {
+		content: '\e809';
+	}
+	.user-wrap .set-icon,
+	.user-wrap .app-more-icon {
+		display: none;
+	}
+	/*PC端 顶部导航链接*/
+	.pc-menu-wrap {
+		display: none;
+	}
+	/* 网站内容 */
+	.logo-box {
+		padding: 25px 0 15px 0;
+	}
+	.logo-box a {
+		display: block;
+		width: 175px;
+		height: 55px;
+		margin: 0 auto;
+	}
+	.logo-box img {
+		display: block;
+		width: 175px;
+		height: 55px;
+	}
+	/*百度搜索框部分*/
+	.form-wrap {
+		position: relative;
+		margin: 0 10px;
+		height: 42px;
+	}
+	.form-in-box {
+		height: 42px;
+		margin-right: 82px;
+		position: relative;
+	}
+	.txt-in-box {
+		float: left;
+		width: 100%;
+		height: 42px;
+		padding: 7px 124px 7px 6px;
+		border: 1px solid #949494;
+		border-bottom-color: #bcbcbc;
+		border-right: 0;
+		background: #ffffff;
+		font-size: 1.8rem;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+		outline: none;
+	}
+	.mike-box {
+		position: absolute;
+		width: 42px;
+		height: 42px;
+		top: 0;
+		right: 0;
+	}
+	.mike-icon {
+		display: block;
+		height: 42px;
+		width: 42px;
+		outline: none;
+	}
+	.mike-icon:before {
+		content: '';
+		display: inline-block;
+		width: 15px;
+		height: 20px;
+		margin-top: 11px;
+		background: url("../images/callicon.png") no-repeat;
+		background-size: auto 20px;
+	}
+	.mike-icon:after {
+		content: '';
+		display: inline-block;
+		border: 4px solid transparent;
+		border-top-color: #717077;
+		margin-left: 5px;
+	}
+	.camera-icon {
+		display: none;
+	}
+	.btn-form {
+		display: block!important;
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 82px;
+		height: 42px;
+		background: #3385ff;
+		color: #ffffff;
+		font-size: 1.6rem;
+		line-height: 42px;
+		text-align: center;
+		border: 0;
+	}
+	/*手机 导航*/
+	.phone-nav-box {
+		margin: 17px 0 14px 0;
+	}
+	.phone-nav-box a {
+		float: left;
+		width: 16%;
+		font-size: 1.2rem;
+		color: #666;
+		text-align: center;
+		cursor: auto;
+	}
+	.phone-nav-box a.phone-nav-l {
+		margin-left: 2%;
+	}
+	.phone-nav-box a.phone-nav-r {
+		margin-right: 2%;
+	}
+	.phone-nav-box a.phone-nav-hide {
+		margin-top: 24px;
+		display: none;
+	}
+	.phone-nav-box a i {
+		display: block;
+		height: 24px;
+		padding: 0;
+		margin-bottom: 4px;
+		font-style: normal;
+		font-family: iconfont;
+		font-size: 2.4rem;
+		line-height: 1;
+	}
+	.phone-icon-news:before {
+		content: '\e799';
+	}
+	.phone-icon-novel:before {
+		content: '\e801';
+	}
+	.phone-icon-video:before {
+		content: '\e802';
+	}
+	.phone-icon-life:before {
+		content: '\e815';
+	}
+	.phone-icon-map:before {
+		content: '\e804';
+	}
+	.phone-icon-more:before {
+		content: '\e812';
+	}
+	.phone-icon-tieba:before {
+		content: '\e806';
+	}
+	.phone-icon-image:before {
+		content: '\e811';
+	}
+	.phone-icon-url:before {
+		content: '\e807';
+	}
+	.phone-icon-spread:before {
+		content: '\e808';
+	}
+	/*平板 内容部分*/
+	.pad-content-wrap {
+		display: none;
+	}
+	/*手机 网站底部*/
+	.phone-foot-wrap {
+		position: absolute;
+		width: 100%;
+		bottom: 0;
+		left: 0;
+	}
+	.phone-foot-link {
+		margin: 0 28px;
+	}
+	.phone-foot-link li {
+		height: 33px;
+		line-height: 33px;
+	}
+	.phone-foot-link li a {
+		font-size: 1.3rem;
+		color: #555;
+	}
+	.phone-foot-link li.hot a:before {
+		display: block;
+		float: left;
+		margin-right: 5px;
+		content: '\e626';
+		font-size: 2.1rem;
+		font-family: iconfont;
+		color: #ed5353;
+	}
+	.phone-foot-link li.bai a {
+		background: url("../images/w_icon2.png") 3px center no-repeat;
+		background-size: auto 100%;
+		padding-left: 25px;
+	}
+	.phone-foot-copy {
+		margin-top: 18px;
+	}
+	.phone-btn-write a {
+		display: block;
+		width: 95px;
+		height: 34px;
+		margin: 0 auto;
+		line-height: 34px;
+		font-size: 1.3rem;
+		color: #666;
+	}
+	.phone-icon-write {
+		float: left;
+		width: 16px;
+		height: 16px;
+		margin: 7px 5px 0 0;
+		background: url("../images/phone-write.png") 50% 50% no-repeat;
+		background-size: 100%;
+	}
+	.phone-copy {
+		margin: 6px 0 16px 0;
+		text-align: center;
+		font-size: 1.2rem;
+		color: #999;
+	}
+	.phone-foot-me {
+		width: 100%;
+		height: 40px;
+		line-height: 40px;
+		margin-top: 32px;
+		background: #FFFFFF;
+	}
+	.phone-foot-me a {
+		display: block;
+		width: 100%;
+		height: 100%;
+		text-align: center;
+		font-size: 1.4rem;
+		color: #262626;
+	}
+	/*平板 网站底部*/
+	.pad-foot-wrap {
+		display: none;
+	}
+	/*PC端 网站底部*/
+	.pc-foot-wrap {
+		display: none;
+	}
+	/*平板 更多产品*/
+	.pad-pro-wrap {
+		display: none!important;
+	}
+	/*PC端 更多产品*/
+	.pc-pro-wrap {
+		display: none;
+	}
+}
+
+
+/*平板屏幕宽度在768到991px之间*/
+
+@media (min-width: 768px) and (max-width: 991px) {
+	body {
+		background: #fafafa;
+	}
+	/*phone顶部*/
+	.header {
+		position: relative;
+		z-index: 900;
+	}
+	/*phone顶部天气*/
+	.weather-wrap {
+		display: none;
+	}
+	/*phone顶部用户*/
+	.user-wrap {
+		float: right;
+		height: 40px;
+		margin-right: 3px;
+	}
+	.user-wrap a {
+		display: inline-block;
+		width: 50px;
+		height: 40px;
+		margin-top: 5px;
+		padding: 0!important;
+		background: url("../images/icon_menu_b0b60d01.png") 50% 50% no-repeat;
+		-webkit-background-size: 200px 40px;
+		background-size: 200px 40px;
+		outline: none;
+	}
+	.user-wrap a.user-icon {
+		background-position: 0 0;
+	}
+	.user-wrap a.set-icon {
+		background-position: -50px 0;
+	}
+	.user-wrap a.app-more-icon {
+		background-position: -100px 0;
+	}
+	.user-wrap a.phone-icon-hover {
+		background-position: -150px 0;
+	}
+	/*PC端 顶部导航链接*/
+	.pc-menu-wrap {
+		display: none;
+	}
+	/* 网站内容 */
+	.content-wrap {
+		width: 83%;
+		margin: 85px auto 0 auto;
+	}
+	/*百度LOGO*/
+	.logo-box {
+		padding: 29px 0 15px 0;
+	}
+	.logo-box a {
+		display: block;
+		width: 220px;
+		height: 71px;
+		margin: 0 auto;
+	}
+	.logo-box img {
+		display: block;
+		width: 220px;
+		height: 71px;
+	}
+	/*百度搜索框部分*/
+	.form-wrap {
+		position: relative;
+		width: 100%;
+		height: 47px;
+		margin-top: 15px;
+	}
+	.form-in-box {
+		position: relative;
+		width: 100%;
+		height: 47px;
+	}
+	.txt-in-box {
+		display: block;
+		width: 100%;
+		height: 100%;
+		padding: 11px 115px 11px 11px;
+		font-size: 2rem;
+		color: #000000;
+		border: 1px solid #38f;
+		background: #ffffff;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+		outline: none;
+	}
+	.mike-box {
+		position: absolute;
+		width: 115px;
+		height: 37px;
+		top: 5px;
+		right: 1px;
+	}
+	.mike-box a {
+		float: left;
+		display: block;
+		width: 57px;
+		height: 37px;
+		background-position: 50% 50%;
+		background-size: auto 30px;
+		outline: none;
+	}
+	.mike-icon {
+		background: url("../images/pb_icon_mike.png") no-repeat;
+		border-right: 1px solid #e6e6e6;
+	}
+	.camera-icon {
+		background: url("../images/pb_icon_camera.png") no-repeat;
+		background-size: auto 25px!important;
+	}
+	.btn-form {
+		position: absolute;
+		display: block;
+		width: 115px;
+		height: 47px;
+		line-height: 47px;
+		text-align: center;
+		top: 0;
+		right: 1px;
+		font-size: 2rem;
+		background: #3385ff;
+		color: #ffffff;
+		border: 0;
+		display: none;
+	}
+	/*手机 导航*/
+	.phone-nav-box {
+		display: none;
+	}
+	/*平板 内容部分*/
+	.pad-content-wrap {
+		margin: 100px 0 0 0;
+	}
+	/*平板 导航*/
+	.pad-nav-wrap {
+		margin-bottom: 30px;
+		background: #ffffff;
+		-webkit-box-shadow: 0 2px 3px rgba(0, 0, 0, .1);
+		-moz-box-shadow: 0 2px 3px rgba(0, 0, 0, .1);
+		box-shadow: 0 2px 3px rgba(0, 0, 0, .1);
+	}
+	.pad-nav-wrap a {
+		float: left;
+		width: 16.66%;
+		height: 60px;
+		padding: 0 10px 0 15px;
+		line-height: 60px;
+		color: #666;
+		font-size: 1.5rem;
+		border-right: 1px solid #f0f0f0;
+		border-bottom: 1px solid #f0f0f0;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+		cursor: pointer;
+		overflow: hidden;
+	}
+	.pad-nav-wrap a:last-child {
+		border-right: 0;
+	}
+	.pad-nav-wrap a img {
+		float: left;
+		margin: 22px 10px 22px 0;
+	}
+	/*平板 推送新闻*/
+	.pad-news-wrap {
+		margin-bottom: 30px;
+		background: #ffffff;
+		-webkit-box-shadow: 0 2px 3px rgba(0, 0, 0, .1);
+		-moz-box-shadow: 0 2px 3px rgba(0, 0, 0, .1);
+		box-shadow: 0 2px 3px rgba(0, 0, 0, .1);
+		overflow: hidden;
+	}
+	.pad-news-head {
+		width: 100%;
+		height: 45px;
+		line-height: 45px;
+		border-bottom: 1px solid #f0f0f0;
+		padding: 0 20px;
+		font-size: 1.6rem;
+		color: #666;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+	}
+	.pad-reload-btn {
+		float: right;
+		width: 18px;
+		height: 18px;
+		margin: 13px 0;
+		background: url("../images/update.png") no-repeat;
+		background-size: 18px 18px;
+		cursor: pointer;
+		opacity: 0.5;
+	}
+	.pad-news-list {
+		width: 100%;
+	}
+	.pad-news-list li {
+		float: left;
+		width: 33.33%;
+		height: 53px;
+		overflow: hidden;
+	}
+	.pad-news-list li.bor-r-no a {
+		border-right: 0;
+	}
+	.pad-news-list li.bor-down-no a {
+		border-bottom: 0;
+	}
+	.pad-news-list li a {
+		display: block;
+		width: 100%;
+		height: 53px;
+		padding: 0 20px;
+		border-right: 1px solid #f0f0f0;
+		border-bottom: 1px solid #f0f0f0;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+		line-height: 53px;
+		font-size: 1.6rem;
+		color: #333;
+		overflow: hidden;
+	}
+	.pad-news-list li a .pad-hot-icon {
+		background: #f13f40;
+		font-size: 1rem;
+		color: #ffffff;
+		padding: 2px 3px;
+	}
+	/*PAD HD下载链接*/
+	.hd-download-link {
+		text-align: center;
+		text-decoration: underline;
+		font-size: 1.4rem;
+	}
+	/*平板 网站底部*/
+	.pad-foot-wrap {
+		margin: 60px 0 20px 0;
+		text-align: center;
+		font-size: 1.4rem;
+		color: #C6C9CD;
+	}
+	/*手机 网站底部*/
+	.phone-foot-wrap {
+		display: none;
+	}
+	/*PC端 网站底部*/
+	.pc-foot-wrap {
+		display: none;
+	}
+	/*平板 更多产品*/
+	.pad-pro-wrap {
+		position: fixed;
+		width: 56px;
+		height: 100%;
+		top: 0;
+		right: 0;
+		padding-top: 48px;
+		background: #eee;
+		border-left: 1px solid #dfdfdf;
+		display: none;
+		overflow: hidden;
+	}
+	.pad-pro-wrap a {
+		display: block;
+		width: 100%;
+		text-align: center;
+		padding: 20px 0 14px 0;
+	}
+	.pad-pro-wrap a img {
+		display: block;
+		width: 28px;
+		height: 28px;
+		margin: 0 auto;
+	}
+	.pad-pro-wrap a span {
+		display: block;
+		text-align: center;
+		line-height: 24px;
+		font-size: 1.2rem;
+		color: #838383;
+	}
+	/*PC端 更多产品*/
+	.pc-pro-wrap {
+		display: none;
+	}
+}
+
+
+/* PC端 屏幕 最小992px*/
+
+@media (min-width: 992px) {
+	body {
+		background: #ffffff;
+	}
+	.container {
+		min-height: 600px;
+	}
+	/*pc端 顶部*/
+	.header {
+		position: relative;
+		z-index: 900;
+	}
+	/*手机 顶部天气*/
+	.weather-wrap {
+		display: none;
+	}
+	/*手机 顶部用户*/
+	.user-wrap {
+		display: none;
+	}
+	/*PC端 顶部导航链接*/
+	.pc-menu-wrap {
+		float: right;
+		margin-top: 20px;
+		padding-right: 8px;
+	}
+	.pc-menu-wrap li {
+		float: left;
+		margin-left: 20px;
+	}
+	.pc-menu-wrap li a {
+		color: #333;
+		font-size: 1.3rem;
+		text-decoration: underline;
+		font-weight: bold;
+	}
+	.pc-menu-wrap li a:hover {
+		color: #00c;
+	}
+	/*PC端的下拉菜单*/
+	.pc-menu-set {
+		position: relative;
+	}
+	.pc-menu-set:hover .pc-menu-set-list {
+		display: block;
+	}
+	.pc-menu-set-list {
+		position: absolute;
+		width: 70px;
+		top: 30px;
+		left: 50%;
+		margin-left: -35px;
+		background: #ffffff;
+		border: 1px solid #d1d1d1;
+		-webkit-box-shadow: 1px 1px 5px #d1d1d1;
+		-moz-box-shadow: 1px 1px 5px #d1d1d1;
+		box-shadow: 1px 1px 5px #d1d1d1;
+		display: none;
+	}
+	.pc-menu-set-list:before {
+		position: absolute;
+		top: -16px;
+		left: 25px;
+		content: '';
+		display: block;
+		border: 8px solid transparent;
+		border-bottom-color: #d1d1d1;
+	}
+	.pc-menu-set-list:after {
+		position: absolute;
+		top: -14px;
+		left: 26px;
+		content: '';
+		display: block;
+		border: 7px solid transparent;
+		border-bottom-color: #ffffff;
+	}
+	.pc-menu-set-list a {
+		display: block;
+		line-height: 26px;
+		text-align: center;
+		text-decoration: none!important;
+		font-size: 1.2rem!important;
+		font-weight: normal!important;
+	}
+	.pc-menu-set-list a:hover {
+		color: #ffffff!important;
+		background: #38f;
+	}
+	/* 更多产品 */
+	.pc-menu-more a {
+		background: #38f;
+		color: #ffffff!important;
+		padding: 5px 8px;
+		text-decoration: none!important;
+	}
+	/* 网站内容 */
+	.content-wrap {
+		position: absolute;
+		width: 100%;
+		height: 40%;
+		top: 0;
+		left: 0;
+		z-index: 800;
+	}
+	/* 百度LOGO*/
+	.logo-box {
+		position: absolute;
+		width: 100%;
+		height: 65px;
+		bottom: 70px;
+	}
+	.logo-box a {
+		display: block;
+		width: 210px;
+		height: 65px;
+		margin: 0 auto;
+	}
+	.logo-box img {
+		display: block;
+		width: 210px;
+		height: 65px;
+	}
+	/*百度搜索框部分*/
+	.form-wrap {
+		position: absolute;
+		width: 100%;
+		height: 38px;
+		bottom: 0;
+	}
+	.form-box {
+		display: block;
+		width: 641px;
+		height: 38px;
+		margin: 0 auto;
+	}
+	.form-in-box {
+		position: relative;
+		float: left;
+		width: 541px;
+		height: 38px;
+	}
+	.txt-in-box {
+		width: 503px;
+		height: 36px;
+		line-height: 36px;
+		padding: 0 30px 0 7px;
+		border: 1px solid #b6b6b6;
+		border-right: 0;
+		background: #ffffff;
+		outline: none;
+	}
+	.txt-in-box:focus {
+		border-color: #3385ff;
+	}
+	.mike-box {
+		position: absolute;
+		width: 30px;
+		height: 36px;
+		top: 0;
+		right: 0;
+	}
+	.mike-box .mike-icon {
+		display: block;
+		width: 30px;
+		height: 36px;
+		background: url("../images/icon_mike.png") 50% 50% no-repeat;
+		-webkit-background-size: 25px 25px;
+		background-size: 25px 25px;
+		cursor: pointer;
+	}
+	.mike-box .mike-icon:hover {
+		background: url("../images/icon_mike1.png") 50% 50% no-repeat;
+		-webkit-background-size: 25px 25px;
+		background-size: 25px 25px;
+	}
+	.mike-box .camera-icon {
+		display: none;
+	}
+	.btn-form {
+		display: block!important;
+		float: left;
+		width: 100px;
+		height: 38px;
+		line-height: 38px;
+		text-align: center;
+		background: #3385ff;
+		border: 0;
+		font-size: 1.5rem;
+		color: #ffffff;
+	}
+	.btn-form:hover {
+		background: #317ef3;
+		-webkit-box-shadow: 1px 1px 1px #ccc;
+		-moz-box-shadow: 1px 1px 1px #ccc;
+		box-shadow: 1px 1px 1px #ccc;
+	}
+	/*手机 导航*/
+	.phone-nav-box {
+		display: none;
+	}
+	/*平板 内容全局*/
+	.pad-content-wrap {
+		display: none;
+	}
+	/*手机 网站底部*/
+	.phone-foot-wrap {
+		display: none;
+	}
+	/*平板 网站底部*/
+	.pad-foot-wrap {
+		display: none;
+	}
+	/*PC端 网站底部*/
+	.pc-foot-wrap {
+		position: absolute;
+		width: 100%;
+		bottom: 40px;
+	}
+	.pc-foot-box {
+		width: 640px;
+		margin: 0 auto;
+	}
+	.app-code-box {
+		float: left;
+		margin-right: 30px;
+	}
+	.app-code-box img {
+		float: left;
+		width: 60px;
+		margin-right: 10px;
+	}
+	.app-code-r {
+		float: left;
+		margin-top: 8px;
+		font-size: 1.2rem;
+		color: #4c4c4c;
+	}
+	.app-code-box p {
+		line-height: 23px;
+	}
+	.app-code-box p.app-detail-box {
+		color: #999;
+	}
+	.copyright-box {
+		float: left;
+		padding-top: 10px;
+		font-size: 1.2rem;
+	}
+	.copyright-box a {
+		text-decoration: underline;
+	}
+	.copyright-box p:first-child a {
+		color: #272727;
+	}
+	.copyright-box p:last-child,
+	.copyright-box p:last-child a {
+		color: #666;
+	}
+	/*平板 更多产品*/
+	.pad-pro-wrap {
+		display: none!important;
+	}
+	/*PC端 更多产品*/
+	.pc-pro-wrap {
+		position: fixed;
+		width: 85px;
+		height: 100%;
+		_height: expression(document.documentElement.clientHeight||document.body.clientHeight);
+		background-color: #f9f9f9;
+		border-left: 1px solid #e7e7e7;
+		z-index: 999;
+		top: 0;
+		right: 0;
+		display: none;
+	}
+	.more-pro-head {
+		width: 66px;
+		height: 43px;
+		line-height: 43px;
+		text-align: center;
+		border-bottom: 1px solid #f0f0f0;
+		font-size: 1.3rem;
+		color: #333333;
+		margin: 0 auto;
+		padding-top: 10px;
+	}
+	.pc-pro-wrap ul {
+		width: 66px;
+		margin: 0 auto;
+	}
+	.pro-link-box {
+		width: 66px;
+		height: 60px;
+		border-bottom: 1px solid #f0f0f0;
+		padding: 8px 0;
+	}
+	.pro-link-box a {
+		text-decoration: none;
+		color: #666;
+		font-size: 1.2rem;
+	}
+	.pro-link-box span {
+		display: block;
+		width: 66px;
+		height: 36px;
+	}
+	.pro-link-box span img {
+		display: block;
+		margin: 0 auto;
+	}
+	.pro-link-box p {
+		width: 66px;
+		height: 24px;
+		line-height: 24px;
+		text-align: center;
+	}
+	.all-link-box {
+		width: 66px;
+		padding: 15px 0;
+		margin: 0 auto;
+	}
+	.all-link-box a {
+		text-decoration: none;
+		color: #666;
+		font-size: 1.2rem;
+	}
+}
