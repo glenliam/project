@@ -1,0 +1,270 @@
+/*设置全局CSS属性*/
+* {
+	margin: 0px;
+	padding: 0px;
+	height: 100%;
+	z-index: 0;
+}
+/*设置全局CSS属性结束*/
+
+
+/*总体页面*/
+.content {
+	position: relative;
+	min-width: 850px;
+	min-height: 600px;
+	font: 13px arial;
+	text-align: left;
+	background-color: #FFFFFF;
+}
+/*总体页面结束*/
+
+
+/*右上角内容*/
+header {
+	position: absolute;
+	right: 0;
+	top: 20px;
+	height: 25px;
+}
+
+header a {
+	float: left;
+	color: #333333;
+	font-weight: bold;
+	line-height: 25px;
+	margin-left: 20px;
+	text-decoration: underline;
+}
+
+
+/*登录和设置超链接不是粗体*/
+header a.login {
+	font-weight: normal;
+}
+
+
+/*最右侧更多产品特殊样式*/
+header a.headmore {
+	font-size: 13px;
+	color: #FFFFFF;
+	font-weight: normal;
+	background-color: #38F;
+	height: 25px;
+	text-decoration: none;
+	margin-right: 10px;
+	padding: 0 5px 0 5px;
+}
+
+
+/*设置超链接访问属性*/
+header a:hover {
+	color: #0000cc;
+}
+
+header a:visited {
+	color: #666666;
+}
+
+header a.headmore:hover,
+a.headmore:visited {
+	color: #FFFFFF;
+}
+/*右上角内容结束*/
+
+
+/*中间主体部分*/
+article {
+	position: relative;
+	bottom: -100px;
+	height: 200px;
+}
+
+
+/*百度LOGO图片*/
+.logo {
+	position: relative;
+	top: 0;
+	height: 129px;
+	text-align: center;
+}
+
+
+/*搜索模块整体包括搜索框和搜索按钮*/
+.search {
+	position: relative;
+	top: 25px;
+	margin: 0 auto;
+	height: 34px;
+	width: 650px;
+}
+
+
+/*搜索框整体*/
+.searchfull {
+	overflow: hidden;
+}
+
+
+/*搜索框文字输入部分*/
+.searchinput {
+	position: relative;
+	float: left;
+	width: 540px;
+	height: 34px;
+	border: 1px #b6b6b6 solid;
+	border-color:#b8b8b8 transparent #ccc #b8b8b8;
+	font-size: 16px;
+	outline: none;
+	text-indent: 6px;
+}
+.searchinput:hover{
+	border-color: #999 transparent #b3b3b3 #999;
+}
+.searchinput:focus{
+	border-color: #4791ff transparent #4791ff #4791ff;
+}
+
+/*搜索框声音按钮部分*/
+.searchvoice {
+	position: absolute;
+	margin: 0;
+	z-index: 1;
+	top: 2px;
+	right: 110px;
+	height: 32px;
+	width: 30px;
+	background: url(../img/voice.png) no-repeat center;
+	background-size: 25px 25px;
+	cursor: pointer;
+}
+
+.searchvoice:hover {
+	background-image: url(../img/voice-hover.png);
+}
+
+
+/*搜索按钮*/
+.searchbtn {
+	position: relative;
+	float: left;
+	font-size: 15px;
+	color: #FFFFFF;
+	letter-spacing: 1px;
+	text-align: center;
+	width: 100px;
+	height: 36px;
+	background-color: #3385ff;
+	border: 0;
+	border-bottom: 1px solid #2d78f4;
+	cursor: pointer;
+	outline: medium;
+}
+.searchbtn:hover{
+	background-color: #317ef3;
+	border-bottom: 1px solid #2868c8;
+	box-shadow: 1px 1px 1px #ccc;
+}
+.searchbtn:focus{
+	background-color: #3075dc;
+	box-shadow: inset 1px 1px 5px #2964bb;
+}
+/*中间主体部分结束*/
+
+
+/*底部部分*/
+/*底部模块整体*/
+footer {
+	position: absolute;
+	font-size: 12px;
+	bottom: 90px;
+	height: 50px;
+	width: 100%;
+	margin: 0 auto;
+	text-align: left;
+}
+
+
+/*底部居中设置*/
+.bottomwr {
+	margin: 0 auto;
+	text-align: center;
+}
+
+
+/*底部左侧部分*/
+.bottomleft {
+	display: inline-block;
+}
+
+
+/*底部二维码图片属性*/
+.bottomleft-img {
+	height: 60px;
+	width: 60px;
+	float: left;
+}
+
+
+/*底部二维码右侧文字属性*/
+.bottomleft-text {
+	float: left;
+	color: #999;
+	margin: 10px 0 0 10px;
+}
+
+.bottomleft-text p {
+	height: 23px;
+	line-height: 23px;
+}
+
+.bottomleft p b {
+	color: #4c4c4c;
+	font-weight: bold;
+}
+
+
+/*底部左侧第一个二维码*/
+.bottomleft1 {
+	display: block;
+	float: left;
+}
+
+
+/*底部左侧第二个二维码设置间距*/
+.bottomleft2 {
+	display: block;
+	float: left;
+	margin-left: 35px;
+}
+
+
+/*底部右侧部分*/
+.bottomright {
+	display: inline-block;
+	position: relative;
+	top: 0;
+	margin-left: 35px;
+	text-align: left;
+}
+
+.bottomright p,
+p a {
+	color: #272727;
+	height: 23px;
+	line-height: 23px;
+}
+
+.bottomright span,
+span a {
+	color: #666;
+}
+
+
+/*工商备案图标*/
+.bottomright span img {
+	margin-bottom: -2px;
+	width: 14px;
+	height: 17px;
+}
+/*底部部分结束*/
