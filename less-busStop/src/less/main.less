@@ -1,0 +1,244 @@
+//设置变量
+@bgColor: #f2f4f4; //背影色
+@cntBgColor: #ffffff;
+@bgGreenColor: #35b558;
+@txtColor: #333333; //一级文字颜色
+@txtColor2: #666666; //二级文字颜色
+@txtWhite: #ffffff; //白色
+@txtgreen: #35b558;
+@txtFontSize12: 12px;
+@txtFontSize14: 14px;
+@txtFontSize16: 16px;
+@txtFontSize18: 18px;
+@txtFontSize36: 36px;
+
+
+//圆角mixin
+//@radius:弧度，默认为5px
+.border-radius (@radius: 5px) {
+    -webkit-border-radius: @radius;
+    -moz-border-radius: @radius;
+    -ms-border-radius: @radius;
+    -o-border-radius: @radius;
+    border-radius: @radius;
+}
+//盒子阴影mixin
+//@x:X坐标，默认为0
+//@y:y坐标，默认为0
+//@size:扩展，默认为0
+//@color:颜色，默认为#000000
+.box-shadow-color(@x:0px, @y:0px, @size:0px , @color:#000000) when (iscolor(@c)) {
+    -webkit-box-shadow: @arguments;
+    -moz-box-shadow: @arguments;
+    -ms-box-shadow: @arguments;
+    -o-box-shadow: @arguments;
+    box-shadow:  @arguments;
+}
+//盒子阴影mixin
+//@x:X坐标，默认为0
+//@y:y坐标，默认为0
+//@size:扩展，默认为0
+//@r:R值，默认0
+//@g:G值，默认0
+//@b:B值，默认0
+.box-shadow-rgb(@x:0px, @y:0px, @size:0px , @r:0, @g:0, @b:0) {
+    -webkit-box-shadow: @x @y @size rgb(@r, @g, @b);
+    -moz-box-shadow: @x @y @size rgb(@r, @g, @b);
+    -ms-box-shadow: @x @y @size rgb(@r, @g, @b);
+    -o-box-shadow: @x @y @size rgb(@r, @g, @b);
+    box-shadow: @x @y @size rgb(@r, @g, @b);
+}
+//盒子阴影mixin
+//@x:X坐标，默认为0
+//@y:y坐标，默认为0
+//@size:扩展，默认为0
+//@r:R值，默认0
+//@g:G值，默认0
+//@b:B值，默认0
+//@alpha:透明度，默认0
+.box-shadow-rgba(@x:0px, @y:0px, @size:0px , @r:0, @g:0, @b:0, @alpha:0) {
+    -webkit-box-shadow: @x @y @size rgba(@r, @g, @b, @alpha);
+    -moz-box-shadow: @x @y @size rgba(@r, @g, @b, @alpha);
+    -ms-box-shadow: @x @y @size rgba(@r, @g, @b, @alpha);
+    -o-box-shadow: @x @y @size rgba(@r, @g, @b, @alpha);
+    box-shadow: @x @y @size rgba(@r, @g, @b, @alpha);
+}
+
+body {
+    background: @bgColor;
+    font-family: Verdana,"Lantinghei SC","Hiragino Sans GB",'Microsoft YaHei',Helvetica,arial,simsun,sans-serif;
+}
+
+a, dd, div, dl, i, img, input, li, p, span, ul {
+	box-sizing: border-box;
+}
+
+
+.bus-station-wrap {
+	margin: 30px;
+	min-width: 1000px;
+	background: @cntBgColor;
+	border:15px solid #232b2d;
+	.box-shadow-rgba(0, 0, 5px, 0, 0, 0, 0.5);
+	.station-header {
+		margin-bottom: 10px;
+		padding: 30px 20px;
+		border-bottom: 15px solid #232b2d;
+		text-align: center;
+		p {
+			font-size: @txtFontSize16;
+			color: @txtColor2;
+		}
+		span {
+			margin: 5px auto;
+			display: block;
+			width: 100px;
+			border-bottom: 1px solid #ccc;
+		}
+		h1 {
+			font-weight: bold;
+			color: @txtgreen;
+			font-size: @txtFontSize36;
+			line-height: 36px;
+		}
+	}
+}
+
+.station-item {
+	margin: 0 10px 10px 10px;
+	background: #e4e4e4;
+	display: flex;
+	.border-radius(5px);
+}
+
+.station-number-infor {
+	flex: 0 0 250px;
+	width: 250px;
+	height: 250px;
+	padding: 10px;
+	border-right: 1px solid #f2f2f2;
+	text-align: center;
+	.bus-station-number {
+		margin: 35px 0 18px 0;
+		display: inline-block;
+		width: 100px;
+		height: 100px;
+		line-height: 100px;
+		.border-radius(100px);
+		background: @bgGreenColor;
+		font-size: @txtFontSize36;
+		color: #fff;
+		span {
+			font-size: @txtFontSize16;
+		}
+	}
+	.bus-start-end {
+		font-size: @txtFontSize18;
+	}
+	.bus-company-name {
+		color: @txtColor2;
+		font-size: @txtFontSize12;
+	}
+}
+
+
+
+
+.station-container {
+	flex: auto;
+	padding: 10px 30px;
+	border-left: 1px solid #ccc;
+	p {
+		height: 25px;
+		line-height: 25px;
+	}
+	.bus-station-explain {
+		text-align: right;
+	}
+	.bus-station-time {
+		color: @txtColor2;
+		span {
+			margin-right: 20px;
+		}
+	}
+	.bus-station-line {
+		margin-top: 20px;
+		display: flex;
+		li {
+			position: relative;
+			flex:1;
+			text-align: center;
+			span {
+				margin-top: 10px;
+				padding: 10px 5px;
+				display: inline-block;
+				max-width: 25px;
+				line-height: 20px;
+				.border-radius(5px);
+				cursor: pointer;
+				&:hover {
+					background: #fff;
+				}
+			}
+			&:before {
+				content: '';
+				position: absolute;
+				left: 0;
+				width: 100%;
+				height: 2px;
+				background: @bgGreenColor;
+			}
+			&:after {
+				content: '';
+				position: absolute;
+				left: 50%;
+				top: -3px;
+				margin-left: -4px;
+				width: 8px;
+				height: 8px;
+				.border-radius(5px);
+				background: @bgGreenColor;
+			}
+		}
+	}
+	.bus-station-direction {
+		margin-top: 20px;
+		height: 3px;
+		span {
+			position: relative;
+			float: right;
+			width: 30%;
+			height: 3px;
+			background: @cntBgColor;
+			&:before {
+				content: '';
+				position: absolute;
+				right: 0;
+				bottom: 3px;
+				border: 8px solid transparent;
+				border-bottom-color: #fff;
+				transform-origin: bottom right;
+				transform: skewX(60deg);
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
