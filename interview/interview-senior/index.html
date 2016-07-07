@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>高级前端面试题</title>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/prettify.css" />
+		<script src="js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/prettify.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+
+	<body onload="prettyPrint()">
+		<div class="container">
+			<div class="row text-center"><h1>高级前端面试题</h1></div>
+			<h3>html5有哪些新特性、移除了那些元素？如何处理兼容问题？如何区分 ？</h3>
+			<pre class="prettyprint Lang-html">* HTML5 现在已经不是 SGML 的子集，主要是关于图像，位置，存储，多任务等功能的增加。
+
+* 绘画 canvas
+用于媒介回放的 video 和 audio 元素
+本地离线存储 localStorage 长期存储数据，浏览器关闭后数据不丢失；
+sessionStorage 的数据在浏览器关闭后自动删除
+语意化更好的内容元素，比如 article、footer、header、nav、section
+表单控件，calendar、date、time、email、url、search
+新的技术webworker, websockt, Geolocation
+
+* 移除的元素
+纯表现的元素：basefont，big，center，font, s，strike，tt，u；
+对可用性产生负面影响的元素：frame，frameset，noframes；
+支持HTML5新标签：
+
+* IE8/IE7/IE6支持通过document.createElement方法产生的标签，
+可以利用这一特性让这些浏览器支持HTML5新标签，
+浏览器支持新标签后，还需要添加标签默认的样式：
+
+* 当然最好的方式是直接使用成熟的框架、使用最多的是html5shim框架</pre>
+
+			<h3>CSS3有哪些新特性？</h3>
+			<pre class="prettyprint Lang-html">  CSS3实现圆角（border-radius:8px），阴影（box-shadow:10px），
+  对文字加特效（text-shadow、），线性渐变（gradient），旋转（transform）
+  transform:rotate(9deg) scale(0.85,0.90) translate(0px,-30px) skew(-9deg,0deg);//旋转,缩放,定位,倾斜
+  增加了更多的CSS选择器  多背景 rgba 
+</pre>
+			
+			<h3>语义化的理解？</h3>
+			<pre class="prettyprint Lang-html">
+用正确的标签做正确的事情！
+html语义化就是让页面的内容结构化，便于对浏览器、搜索引擎解析；
+在没有样式CCS情况下也以一种文档格式显示，并且是容易阅读的。
+搜索引擎的爬虫依赖于标记来确定上下文和各个关键字的权重，利于 SEO。
+使阅读源代码的人对网站更容易将网站分块，便于阅读维护理解。
+			</pre>
+			
+			<h3>HTML5的离线储存？</h3>
+			<pre class="prettyprint Lang-html">
+localStorage 长期存储数据，浏览器关闭后数据不丢失；
+sessionStorage 数据在浏览器关闭后自动删除。
+			</pre>
+
+			<h3>描述一段语义的html代码</h3>
+			<pre class="prettyprint Lang-html">
+&lt;header&gt;标题&lt;/header&gt;
+&lt;article&gt;正文&lt;/article&gt;
+&lt;footer&gt;尾部&lt;/footer&gt;</pre>
+
+			<h3>iframe有那些缺点？</h3>
+			<pre class="prettyprint Lang-html">*iframe会阻塞主页面的Onload事件；
+
+*iframe和主页面共享连接池，而浏览器对相同域的连接有限制，所以会影响页面的并行加载。
+使用iframe之前需要考虑这两个缺点。如果需要使用iframe，最好是通过javascript
+动态给iframe添加src属性值，这样可以可以绕开以上两个问题。
+</pre>
+
+			<h3>请描述一下 cookies，sessionStorage 和 localStorage 的区别？</h3>
+			<pre class="prettyprint Lang-html">cookie在浏览器和服务器间来回传递。 sessionStorage和localStorage不会
+sessionStorage和localStorage的存储空间更大；
+sessionStorage和localStorage有更多丰富易用的接口；
+sessionStorage和localStorage各自独立的存储空间。
+</pre>
+
+			<h3>webSocket如何兼容低浏览器？</h3>
+			<pre class="prettyprint Lang-html">Adobe Flash Socket 、 ActiveX HTMLFile (IE) 、 基于 multipart 编码发送 XHR 、 基于长轮询的 XHR
+</pre>
+
+			<h3>CSS 选择符有哪些？哪些属性可以继承？优先级算法如何计算？ CSS3新增伪类有那些？</h3>
+			<pre class="prettyprint Lang-html">*   1.id选择器（ # myid）
+   2.类选择器（.myclassname）
+   3.标签选择器（div, h1, p）
+   4.相邻选择器（h1 + p）
+   5.子选择器（ul &lt; li）
+   6.后代选择器（li a）
+   7.通配符选择器（ * ）
+   8.属性选择器（a[rel = &quot;external&quot;]）
+   9.伪类选择器（a: hover, li: nth - child）
+
+*  可继承的样式： font-size font-family color, UL LI DL DD DT;
+
+*  不可继承的样式：border padding margin width height ;
+
+*  优先级就近原则，同权重情况下样式定义最近者为准;
+
+*  载入样式以最后载入的定位为准;
+
+*  优先级为:
+   !important &gt;  id &gt; class &gt; tag  
+   important 比 内联优先级高
+   
+*  CSS3新增伪类举例：
+p:first-of-type 选择属于其父元素的首个 &lt;p&gt; 元素的每个 &lt;p&gt; 元素。
+p:last-of-type  选择属于其父元素的最后 &lt;p&gt; 元素的每个 &lt;p&gt; 元素。
+p:only-of-type  选择属于其父元素唯一的 &lt;p&gt; 元素的每个 &lt;p&gt; 元素。
+p:only-child    选择属于其父元素的唯一子元素的每个 &lt;p&gt; 元素。
+p:nth-child(2)  选择属于其父元素的第二个子元素的每个 &lt;p&gt; 元素。
+:enabled  :disabled 控制表单控件的禁用状态。
+:checked        单选框或复选框被选中。
+</pre>
+
+			<h3>如何居中div？如何居中一个浮动元素？</h3>
+			<pre class="prettyprint Lang-html">*   给div设置一个宽度，然后添加margin:0 auto属性
+div{
+    width:200px;
+    margin:0 auto;
+ }
+*   居中一个浮动元素
+确定容器的宽高 宽500 高 300 的层
+  设置层的外边距
+
+ .div { 
+  Width:500px ; height:300px;//高度可以不设
+  Margin: -150px 0 0 -250px;
+  position:relative;相对定位
+  background-color:pink;//方便看效果
+  left:50%;
+  top:50%;
+} 
+</pre>
+
+			<h3>列出display的值，说明他们的作用。position的值， relative和absolute定位原点是？</h3>
+			<pre class="prettyprint Lang-html">  (1).   
+  block 象块类型元素一样显示。
+  none 缺省值。象行内元素类型一样显示。
+  inline-block 象行内元素一样显示，但其内容象块类型元素一样显示。
+  list-item 象块类型元素一样显示，并添加样式列表标记。
+
+  (2). 
+  *absolute 
+        生成绝对定位的元素，相对于 static 定位以外的第一个父元素进行定位。 
+
+  *fixed （老IE不支持）
+        生成绝对定位的元素，相对于浏览器窗口进行定位。 
+
+  *relative 
+        生成相对定位的元素，相对于其正常位置进行定位。 
+
+  * static  默认值。没有定位，元素出现在正常的流中
+  *（忽略 top, bottom, left, right z-index 声明）。
+
+  * inherit 规定从父元素继承 position 属性的值。
+</pre>
+
+			<h3>淘宝的样式初始化：</h3>
+			<pre class="prettyprint Lang-css">body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, legend, button, input, textarea, th, td { margin:0; padding:0; }
+body, button, input, select, textarea { font:12px/1.5tahoma, arial, \5b8b\4f53; }
+h1, h2, h3, h4, h5, h6{ font-size:100%; }
+address, cite, dfn, em, var { font-style:normal; }
+code, kbd, pre, samp { font-family:couriernew, courier, monospace; }
+small{ font-size:12px; }
+ul, ol { list-style:none; }
+a { text-decoration:none; }
+a:hover { text-decoration:underline; }
+sup { vertical-align:text-top; }
+sub{ vertical-align:text-bottom; }
+legend { color:#000; }
+fieldset, img { border:0; }
+button, input, select, textarea { font-size:100%; }
+table { border-collapse:collapse; border-spacing:0; }
+</pre>
+
+			<h3>css定义的权重</h3>
+			<pre class="prettyprint Lang-html">以下是权重的规则：标签的权重为1，class的权重为10，id的权重为100，以下例子是演示各种定义的权重值：
+
+/*权重为1*/
+div{
+}
+/*权重为10*/
+.class1{
+}
+/*权重为100*/
+#id1{
+}
+/*权重为100+1=101*/
+#id1 div{
+}
+/*权重为10+1=11*/
+.class1 div{
+}
+/*权重为10+10+1=21*/
+.class1 .class2 div{
+} 
+
+如果权重相同，则最后定义的样式会起作用，但是应该避免这种情况出现
+</pre>
+
+			<h3>eval是做什么的？</h3>
+			<pre class="prettyprint Lang-html">它的功能是把对应的字符串解析成JS代码并运行；
+应该避免使用eval，不安全，非常耗性能（2次，一次解析成js语句，一次执行）。
+</pre>
+
+			<h3>写一个通用的事件侦听器函数。</h3>
+			<pre class="prettyprint Lang-js">  // event(事件)工具集，来源：github.com/markyun
+  markyun.Event = {
+    // 页面加载完成后
+    readyEvent : function(fn) {
+      if (fn==null) {
+        fn=document;
+      }
+      var oldonload = window.onload;
+      if (typeof window.onload != 'function') {
+        window.onload = fn;
+      } else {
+        window.onload = function() {
+          oldonload();
+          fn();
+        };
+      }
+    },
+    // 视能力分别使用dom0||dom2||IE方式 来绑定事件
+    // 参数： 操作的元素,事件名称 ,事件处理程序
+    addEvent : function(element, type, handler) {
+      if (element.addEventListener) {
+        //事件类型、需要执行的函数、是否捕捉
+        element.addEventListener(type, handler, false);
+      } else if (element.attachEvent) {
+        element.attachEvent('on' + type, function() {
+          handler.call(element);
+        });
+      } else {
+        element['on' + type] = handler;
+      }
+    },
+    // 移除事件
+    removeEvent : function(element, type, handler) {
+      if (element.removeEnentListener) {
+        element.removeEnentListener(type, handler, false);
+      } else if (element.datachEvent) {
+        element.detachEvent('on' + type, handler);
+      } else {
+        element['on' + type] = null;
+      }
+    }, 
+    // 阻止事件 (主要是事件冒泡，因为IE不支持事件捕获)
+    stopPropagation : function(ev) {
+      if (ev.stopPropagation) {
+        ev.stopPropagation();
+      } else {
+        ev.cancelBubble = true;
+      }
+    },
+    // 取消事件的默认行为
+    preventDefault : function(event) {
+      if (event.preventDefault) {
+        event.preventDefault();
+      } else {
+        event.returnValue = false;
+      }
+    },
+    // 获取事件目标
+    getTarget : function(event) {
+      return event.target || event.srcElement;
+    },
+    // 获取event对象的引用，取到事件的所有信息，确保随时能使用event；
+    getEvent : function(e) {
+      var ev = e || window.event;
+      if (!ev) {
+        var c = this.getEvent.caller;
+        while (c) {
+          ev = c.arguments[0];
+          if (ev && Event == ev.constructor) {
+            break;
+          }
+          c = c.caller;
+        }
+      }
+      return ev;
+    }
+  }; 
+</pre>
+
+			<h3>介绍js的基本数据类型。</h3>
+			<pre class="prettyprint Lang-html">number,string,boolean,object,undefined
+</pre>
+
+			<h3>["1", "2", "3"].map(parseInt) 答案是多少？</h3>
+			<pre class="prettyprint Lang-html"> [1, NaN, NaN] 因为 parseInt 需要两个参数 (val, radix) 但 map 传了 3 个 (element, index, array)
+</pre>
+
+			<h3>如何创建一个对象?</h3>
+			<pre class="prettyprint Lang-js">  function Person(name, age) {
+    this.name = name;
+    this.age = age;
+    this.sing = function() { alert(this.name) } 
+  } 
+</pre>
+
+			<h3>JSON 的了解？</h3>
+			<pre class="prettyprint Lang-html">JSON(JavaScript Object Notation) 是一种轻量级的数据交换格式。
+它是基于JavaScript的一个子集。数据格式简单, 易于读写, 占用带宽小
+{'age':'12', 'name':'back'}
+</pre>
+
+			<h3>js延迟加载的方式有哪些？</h3>
+			<pre class="prettyprint Lang-html">defer和async、动态创建DOM方式（用得最多）、按需异步载入js
+</pre>
+
+			<h3>.call() 和 .apply() 的区别？</h3>
+			<pre class="prettyprint Lang-js">  例子中用 add 来替换 sub，add.call(sub,3,1) == add(3,1) ，所以运行结果为：alert(4); 
+
+  注意：js 中的函数其实是对象，函数名是对 Function 对象的引用。
+
+  function add(a,b)
+  {
+    alert(a+b);
+  }
+
+  function sub(a,b)
+  {
+    alert(a-b);
+  }
+
+  add.call(sub,3,1);  
+</pre>
+
+			<h3>编写一个数组去重的方法</h3>
+			<pre class="prettyprint Lang-js">function oSort(arr)
+{
+var result ={};
+var newArr=[];
+for(var i=0;i&lt;arr.length;i++)
+{
+if(!result[arr])
+{
+newArr.push(arr)
+result[arr]=1
+}
+}
+return newArr
+}
+</pre>
+
+			<h3>”==”和“===”的不同</h3>
+			<pre class="prettyprint Lang-js">前者会自动转换类型
+后者不会
+</pre>
+
+			<h3>document load 和document ready的区别</h3>
+			<pre class="prettyprint Lang-js">Document.onload 是在结构和样式加载完才执行js
+Document.ready原生种没有这个方法，jquery中有 $().ready(function)
+</pre>
+
+			<h3>split() join() 的区别</h3>
+			<pre class="prettyprint Lang-js">前者是切割成数组的形式，后者是将数组转换成字符串
+</pre>
+
+			<h3>你有哪些性能优化的方法？</h3>
+			<pre class="prettyprint Lang-html">  （1） 减少http请求次数：CSS Sprites, JS、CSS源码压缩、图片大小控制合适；网页Gzip，CDN托管，data缓存 ，图片服务器。
+
+  （2） 前端模板 JS+数据，减少由于HTML标签导致的带宽浪费，前端用变量保存AJAX请求结果，每次操作本地变量，不用请求，减少请求次数
+
+  （3） 用innerHTML代替DOM操作，减少DOM操作次数，优化javascript性能。
+
+  （4） 当需要设置的样式很多时设置className而不是直接操作style。
+
+  （5） 少用全局变量、缓存DOM节点查找的结果。减少IO读取操作。
+
+  （6） 避免使用CSS Expression（css表达式)又称Dynamic properties(动态属性)。
+
+  （7） 图片预加载，将样式表放在顶部，将脚本放在底部  加上时间戳。
+
+  （8） 避免在页面的主体布局中使用table，table要等其中的内容完全下载之后才会显示出来，显示比div+css布局慢。
+</pre>
+
+			<h3>http状态码有那些？分别代表是什么意思？</h3>
+			<pre class="prettyprint Lang-html">100-199 用于指定客户端应相应的某些动作。 
+200-299 用于表示请求成功。 
+300-399 用于已经移动的文件并且常被包含在定位头信息中指定新的地址信息。 
+400-499 用于指出客户端的错误。400    1、语义有误，当前请求无法被服务器理解。401   当前请求需要用户验证 403  服务器已经理解请求，但是拒绝执行它。
+500-599 用于支持服务器错误。 503 – 服务不可用
+</pre>
+
+			<h3>一个页面从输入 URL 到页面加载显示完成，这个过程中都发生了什么？（流程说的越详细越好）</h3>
+			<pre class="prettyprint Lang-html">  查找浏览器缓存 
+  DNS解析、查找该域名对应的IP地址、重定向（301）、发出第二个GET请求
+  进行HTTP协议会话
+  客户端发送报头(请求报头)
+  服务器回馈报头(响应报头)
+  html文档开始下载
+  文档树建立，根据标记请求所需指定MIME类型的文件
+  文件显示
+  [
+  浏览器这边做的工作大致分为以下几步：
+
+  加载：根据请求的URL进行域名解析，向服务器发起请求，接收文件（HTML、JS、CSS、图象等）。
+
+  解析：对加载到的资源（HTML、JS、CSS等）进行语法解析，建议相应的内部数据结构（比如HTML的DOM树，JS的（对象）属性表，CSS的样式规则等等）
+  }
+</pre>
+
+			<h3>平时如何管理你的项目？</h3>
+			<pre class="prettyprint Lang-html">  先期团队必须确定好全局样式（globe.css），编码模式(utf-8) 等；
+
+  编写习惯必须一致（例如都是采用继承式的写法，单样式都写成一行）；
+
+  标注样式编写人，各模块都及时标注（标注关键样式调用的地方）；
+
+  页面进行标注（例如 页面 模块 开始和结束）；
+
+  CSS跟HTML 分文件夹并行存放，命名都得统一（例如style.css）；
+
+  JS 分文件夹存放 命名以该JS功能为准的英文翻译。
+
+  图片采用整合的 images.png png8 格式文件使用 尽量整合在一起使用方便将来的管理
+</pre>
+
+			<h3>前端开发工程师的前景</h3>
+			<h5>1、前端开发工程师的前景一片大好</h5>
+　　				<p>前端开发是随着Web的发展细分出来的行业，随着互联网的飞速发展，PC、手机、IPaid等各种上网设备的普及，将大大拉升市场对前端开发人才的需求。同时人们对网页用户体验要求也越来越高，公司对于前端技术人员相当重视。所以Web前端工程师成为各大企业争抢的香饽饽。</p>
+　　				<p>根据数据统计，每个月企业在招聘Web前端的岗位量在2.4万个左右，由此可见市场对于Web前端工程师的需求有多么旺盛！职业专家还介绍，前端工程师在工作1-2年后成为高级前端工程师，年薪可达到15万以上；工作3-5年后成为前端技术经理或主管，年薪在15-50万之间；工作5年以上，通常会成为互联网公司的技术总监或产品经理，年薪达到50-100万不成问题！</p>
+　　				<p>就长远来说，专家预测2020年中国互联网用户将达到11亿，全民普及率达76%，互联网在未来将保持稳定的发展趋势，相应对前端开发工程师的需求也必将热度不减。</p>
+			<h5>2、更加注重Web移动开发</h5>
+　　			<p>据互联网大会的数据分析，2015中国移动上网设备比例进一步增长，用户移动需求旺盛，网民日均手机上网时长在四小时以上的用户占比达34.5%，而4G、5G的发展也必将助力移动互联网强劲的发展势头。如此火爆的发展趋势，标志着市场对移动前端开发工程师的需求将越来越强！</p>
+　　			<p>从互联网大会的相关数据可以看到，前端开发确实是一个非常有前景也很有“钱”途的工作。如果你准备进入前端开发行业，非常重要的一点是先有一个健全的知识结构体系，踏踏实实的从HTML、CSS、JS等知识点、技术点逐步深入的学习积累。</p>
+	
+		</div>
+	</body>
+
+</html>

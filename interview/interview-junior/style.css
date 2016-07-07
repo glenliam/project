@@ -1,0 +1,20 @@
+body{
+	font-family: font-family:Tahoma,Arial,”Helvetica Neue“,”Hiragino Sans GB”,Simsun,sans-self;
+	background-color: #2f4050;
+	font-size: 14px;
+	color: #cccccc;
+	margin: 0;
+	padding: 0 0 0 20px;
+}
+h2{
+	font-size: 18px;
+	height: 18px;
+	color: #00CFCB;
+	padding: 20px 0 6px 0;
+	margin: 0;
+}
+p{
+	margin: 0;
+	text-align: left;
+	line-height: 14px;
+}
