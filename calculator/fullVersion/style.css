@@ -1,0 +1,58 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+
+li {
+	list-style: none;
+}
+
+body {
+	background: #F5F5F5;
+}
+
+#counter_wr {
+	font-family: "microsoft yahei", sans-serif;
+	font-size: 14px;
+	width: 480px;
+	height: 190px;
+	position: relative;
+	margin: 100px auto 0 auto ;
+	border: 1px solid #909090;
+	border-radius: 10px 10px 0 0;
+}
+
+#counter ul {
+	width: 496px;
+}
+
+#counter li {
+	width: 60px;
+	height: 30px;
+	line-height: 30px;
+	float: left;
+	background: #D6D6D6;
+	border: 1px solid #909090;
+	text-align: center;
+	color: #000000;
+	cursor: pointer;
+	margin: -1px;
+}
+
+#counter .hover {
+	color: #ffffff;
+	background: #F5923D;
+}
+
+#counter input {
+	border: 0;
+	width: 461px;
+	height: 70px;
+	line-height: 30px;
+	padding: 0 10px;
+	background: #4C4C4C;
+	text-align: right;
+	color: #EFF8FA;
+	font-size: 26px;
+	border-radius: 8px 8px 0 0;
+}

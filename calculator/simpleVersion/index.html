@@ -1,0 +1,75 @@
+<!DOCtype html>
+<html lang="zh-CN">
+
+	<head>
+		<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+		<title>简易计算器</title>
+	</head>
+
+	<body>
+		<script language="JavaScript">
+			function equal(one, operator, two) {
+				one = parseInt(one);
+				two = parseInt(two);
+				switch (operator) {
+					case '+':
+						total = one + two; //解决不是运算而是组合字符串的问题
+						break;
+					case '-':
+						total = one - two;
+						break;
+					case '*':
+						total = one * two;
+						break;
+					case '/':
+						total = one / two;
+						break;
+					default:
+						total = '输入错误！';
+						break;
+				}
+				return total;
+			}
+
+			function FunOut() {
+				var a = document.form1.aa.value;
+				var c = document.form1.cc.value;
+				var b = document.form1.bb.value;
+				document.form1.result.value = equal(a, c, b);
+			}
+
+			function FunZero() {
+				document.form1.result.value = '';
+				document.form1.aa.value = '';
+				document.form1.bb.value = '';
+				document.form1.cc.value = '';
+			}
+		</script>
+		<form name="form1">
+			<center>
+				<table border=1 cellspacing=0>
+					<tr>
+						<td colspan="3" style="text-align: center;height: 50px;">简易计算器</td>
+					</tr>
+					<tr>
+						<td colspan="3" style="text-align: center;height: 40px;">运算符包括以下4种：+  -  *  /</td>
+					</tr>
+					<tr>
+						<td>
+							<input type="text" name="aa" placeholder="输入数字" style="width: 80px;height: 30px;font-size: 14px;">
+							<input type="text" name="cc" placeholder="输入运算符" style="width: 80px;height: 30px;font-size: 14px;">
+							<input type="text" name="bb" placeholder="输入数字" style="width: 80px;height: 30px;font-size: 14px;">
+						</td>
+						<td> =
+							<input type="text" name="result" placeholder="点击计算出结果" style="width: 100px;height: 30px;font-size: 14px;">
+						</td>
+						<td>
+							<input type="button" value="计算" onClick="FunOut()">
+							<input type="button" value="清空" onClick="FunZero()">
+						</td>
+
+				</table>
+		</form>
+	</body>
+
+</html>
