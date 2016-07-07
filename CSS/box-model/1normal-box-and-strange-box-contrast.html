@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>正常盒子与怪异盒子模型对比</title>
+	<style type="text/css">
+		html{
+			font: 13px arial;
+			margin: 0;
+			padding: 0;
+		}
+		/*正常的盒子模型*/
+		.xiezi1{
+			width: 100px;
+			height: 100px;
+			background-color: #FFCC99;
+			}
+		.xiehe1{
+			margin: 100px;
+			padding: 10px;
+			width: 100px;  /*事实上盒子的长和宽被撑大到130px*/
+			height: 100px;
+			background-color: #CCFF99;
+			border: 5px solid #FF6666;
+			box-shadow: 0 0 30px 10px #BABABA;
+			-moz-border-radius: 10px;
+			-webkit-border-radius: 10px;
+			border-radius:10px;
+		}
+		
+		/*怪异的盒子模型*/
+		.xiezi2{
+			width: 100px;
+			height: 100px;
+			background-color: #FFCC99;
+			}
+		.xiehe2{
+			margin: 100px;
+			padding: 10px;
+			width: 100px;
+			height: 100px;
+			background-color: #CCFF99;
+			border: 5px solid #FF6666;
+			box-sizing: border-box;  /*区别在这个属性，盒子的大小没有改变*/
+			box-shadow: 0 0 30px 10px #BABABA;
+			-moz-border-radius: 10px;
+			-webkit-border-radius: 10px;
+			border-radius:10px;
+		}
+	</style>
+</head>
+<body>
+	<h1>正常的盒子模型</h1>
+	<div class="xiehe1">
+		<div class="xiezi1">
+			鞋子鞋子鞋子鞋子鞋子鞋子鞋子鞋子鞋子鞋子鞋子
+		</div>
+	</div>
+	<h1>怪异的盒子模型</h1>
+	<div class="xiehe2">
+		<div class="xiezi2">
+			鞋子鞋子鞋子鞋子鞋子鞋子鞋子鞋子鞋子鞋子鞋子
+		</div>
+	</div>
+</body>
+</html>

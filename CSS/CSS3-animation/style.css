@@ -1,0 +1,307 @@
+html,
+body {
+	height: 100%;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	background-color: #5ABE9C;
+	text-align: center;
+	/*overflow:hidden;*/
+}
+
+
+/*Flex居中*/
+snowman {
+	display: flex;
+	align-items: center;
+	/*垂直居中*/
+	justify-content: center;
+	/*水平居中*/
+	width: 100%;
+	height: 100%;
+	margin-top: -50px;
+}
+
+
+/*雪人的身体*/
+snowman .circle {
+	width: 300px;
+	height: 300px;
+	position: relative;
+	top: 50px;
+	left: 0;
+	background: #FCFCFC;
+	box-shadow: -20px -10px 0px #D9D9D9 inset;
+	/*内阴影*/
+	border-radius: 50%;
+	/*圆角为圆形*/
+	z-index: 1;
+}
+
+
+/*雪人身体上面的脑袋*/
+snowman .head {
+	display: block;
+	width: 150px;
+	height: 150px;
+	position: relative;
+	top: -120px;
+	left: 70px;
+	background: #FCFCFC;
+	box-shadow: -5px 0px 0px #D9D9D9 inset;
+	/*内阴影*/
+	border-radius: 50%;
+	z-index: 2;
+}
+
+
+/*雪人的鼻子三角形*/
+snowman .nose {
+	display: block;
+	width: 0px;
+	height: 0px;
+	position: relative;
+	top: -210px;
+	left: 25px;
+	border-style: solid;
+	/*设置三角形*/
+	border-width: 12px 110px 8px 0;
+	border-color: transparent #EA735F transparent transparent;
+	-webkit-transform: rotate(10deg);
+	/*鼻子上翘旋转*/
+	-moz-transform: rotate(10deg);
+	transform: rotate(10deg);
+	box-shadow: 0px 43px #D9D9D9 inset;
+	/*内阴影*/
+	z-index: 3;
+}
+
+
+/*雪人鼻子上面的左眼*/
+snowman .eye_left {
+	display: inline-block;
+	position: relative;
+	top: -40px;
+	left: 75px;
+	width: 16px;
+	height: 16px;
+	border-radius: 50%;
+	background: #114068;
+	z-index: 3;
+}
+
+
+/*雪人鼻子上面的右眼*/
+snowman .eye_right {
+	clear: all;
+	display: inline-block;
+	position: relative;
+	left: 130px;
+	top: -67px;
+	width: 16px;
+	height: 16px;
+	border-radius: 50%;
+	background: #114068;
+	z-index: 3;
+}
+
+
+/*红色围巾*/
+snowman .scarf {
+	display: block;
+	position: relative;
+	top: -165px;
+	left: 55px;
+	width: 220px;
+	height: 0;
+	border-bottom: 28px solid #EA735F;
+	/*不规则的长方形*/
+	border-left: 30px solid transparent;
+	border-right: 29px solid transparent;
+	border-radius: 0px 100% 5px 10px;
+	/* box-shadow: 0px 1px #D9D9D9 inset;  老师！！我这里设置内阴影为什么没效果*/
+	z-index: 3;
+}
+
+
+/*雪人下面的阴影*/
+snowman .shadow {
+	display: block;
+	position: relative;
+	left: 60px;
+	bottom: -86px;
+	width: 240px;
+	height: 30px;
+	background: rgba(0, 0, 0, 0.2);
+	/*调整Alpha值，半透明效果*/
+	border-radius: 50%;
+}
+
+
+/*左手臂*/
+.left-hand {
+	position: relative;
+	top: -162px;
+	left: -63px;
+	width: 90px;
+	height: 0;
+	-webkit-transform: rotate(28deg);
+	/*正向旋转*/
+	-moz-transform: rotate(28deg);
+	transform: rotate(28deg);
+	border-bottom: 8px solid #96651B;
+	border-left: 2px solid transparent;
+	border-right: 0 solid transparent;
+	z-index: 1;
+}
+
+/*右手臂*/
+.right-hand {
+	position: relative;
+	top: -140px;
+	right: -277px;
+	width: 80px;
+	height: 0;
+	-webkit-transform: rotate(-32deg);
+	/*逆向旋转*/
+	-moz-transform: rotate(-32deg);
+	transform: rotate(-32deg);
+	border-bottom: 8px solid #96651B;
+	border-left: 2px solid transparent;
+	border-right: 0 solid transparent;
+	z-index: 1;
+}
+
+
+/*心形由两个半圆角矩形组成*/
+snowman .love {
+	position: absolute;
+	top: 80px;
+	left: 150px;
+}
+
+/*左边的心*/
+snowman .love .love_left {
+	position: relative;
+	left: 20px;
+	width: 40px;
+	height: 60px;
+	background: #FB88AC;
+	border: 0 solid transparent;
+	-moz-border-radius: 100px;
+	-webkit-border-radius: 100px;
+	border-radius: 100px 100px 0 0;
+	-moz-transform: rotate(-45deg);
+	-ms-transform: rotate(-45deg);
+	-o-transform: rotate(-45deg);
+	-webkit-transform: rotate(-45deg);
+}
+
+/*右边的心*/
+snowman .love .love_right {
+	position: relative;
+	top: -60px;
+	left: 34px;
+	width: 40px;
+	height: 60px;
+	background: #FCA9C3;
+	border: 0 solid transparent;
+	-moz-border-radius: 100px;
+	-webkit-border-radius: 100px;
+	border-radius: 100px 100px 0 0;
+	-moz-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	-o-transform: rotate(45deg);
+	-webkit-transform: rotate(45deg);
+}
+
+/*祝福文字*/
+snowman .love .content {
+	margin-top: -45px;
+	margin-left: -4px;
+	color: #5EBD9D;
+	font: 16px arial;
+	font-weight: bold;
+}
+
+/*设置动画，心为放大缩小，手臂旋转角度，眼睛高度变为1显示出眨眼效果*/
+.love {
+	-webkit-animation: love 2s .5s ease both;
+	-webkit-animation-iteration-count: infinite;
+}
+@-webkit-keyframes love {
+	0% {
+		-webkit-transform: scale(1)
+	}
+	50% {
+		-webkit-transform: scale(1.1)
+	}
+	100% {
+		-webkit-transform: scale(1)
+	}
+}
+
+.left-hand {
+	-webkit-animation: head1 2s .2s ease both;
+	-webkit-animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes head1 {
+	0% {
+		opacity: 1;
+		-webkit-transform: rotate(28deg)
+	}
+	30% {
+		opacity: 1;
+		-webkit-transform: rotate(30deg)
+	}
+	60% {
+		-webkit-transform: rotate(20deg)
+	}
+	100% {
+		-webkit-transform: rotate(28deg)
+	}
+}
+
+.right-hand {
+	-webkit-animation: head2 1s .2s ease both;
+	-webkit-animation-iteration-count: infinite;
+}
+@-webkit-keyframes head2 {
+	0% {
+		opacity: 1;
+		-webkit-transform: rotate(-32deg)
+	}
+	30% {
+		opacity: 1;
+		-webkit-transform: rotate(-34deg)
+	}
+	60% {
+		-webkit-transform: rotate(-24deg)
+	}
+	100% {
+		-webkit-transform: rotate(-32deg)
+	}
+}
+
+.eye_left {
+	animation: eye 2.5s 0.5s linear infinite;
+}
+.eye_right {
+	animation: eye 2.5s 0.5s linear infinite;
+}
+
+@-webkit-keyframes eye {
+	0% {
+		width: 16px;
+		height: 16px;
+	}
+	5% {
+		width: 16px;
+		height: 1px;
+	}
+	10% {
+		width: 16px;
+		height: 16px;
+	}
+}

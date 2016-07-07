@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>弹性盒子水平分栏，垂直分栏，排序(flex)，cloumn分栏</title>
+	<style type="text/css">
+		html{
+			font: 13px arial;
+			margin: 0;
+			padding: 0;
+		}
+		.con{
+			display:-webkit-flex;
+			display:flex;
+			margin:0;
+			padding:10px;
+			list-style:none;
+			background-color:#eee;
+			-moz-border-radius: 15px;
+			-webkit-border-radius: 15px;
+			border-radius:15px;
+		}
+		.con li{
+			width:200px;
+			height:50px;
+			margin: 5px;
+			border:1px solid #aaa;
+			text-align:center;
+			-moz-border-radius: 5px;
+			-webkit-border-radius: 5px;
+			border-radius:5px;
+			}
+			
+		/*水平分栏*/	
+		#box1{
+			height:180px;
+			-webkit-flex-direction:column; /*列，垂直*/
+			flex-direction:column;
+			}
+			
+		/*垂直分栏*/
+		#box2{
+			height:80px;
+			-webkit-flex-direction:row;  /*行，水平*/
+			flex-direction:row;
+			}
+			
+		/*排序*/
+		.con li.o1{order: 3; -webkit-order: 3;}
+		.con li.o2{order: 2; -webkit-order: 2;}
+		.con li.o3{order: 1; s-webkit-order: 1;}
+		
+		/*column分栏*/
+		.column{
+			-webkit-column-count: 4;
+			-webkit-column-rule-style: dotted;
+		}
+	</style>
+</head>
+<body>
+	
+	<h1>弹性盒子垂直分栏</h1>
+	<ul id="box1" class="con">
+		<li>第一个</li>
+		<li>第二个</li>
+		<li>第三个</li>
+	</ul>
+	
+	<h1>弹性盒子水平分栏</h1>
+	<ul id="box2" class="con">
+		<li>第一个</li>
+		<li>第二个</li>
+		<li>第三个</li>
+	</ul>
+	<h1>弹性盒子排序</h1>
+	<ul id="box2" class="con">
+		<li class="o1">第一个</li>
+		<li class="o2">第二个</li>
+		<li class="o3">第三个</li>
+	</ul>
+
+	<h1>弹性盒子cloumn分栏</h1>
+	<div class="column">
+		新华社北京12月22日电 中央城市工作会议12月20日至21日在北京举行。中共中央总书记、国家主席、中央军委主席习近平，中共中央政治局常委、国务院总理李克强，中共中央政治局常委、全国人大常委会委员长张德江，中共中央政治局常委、全国政协主席俞正声，中共中央政治局常委、中央书记处书记刘云山，中共中央政治局常委、中央纪委书记王岐山，中共中央政治局常委、国务院副总理张高丽出席会议。
+习近平在会上发表重要讲话，分析城市发展面临的形势，明确做好城市工作的指导思想、总体思路、重点任务。李克强在讲话中论述了当前城市工作的重点，提出了做好城市工作的具体部署，并作总结讲话。
+会议指出，我国城市发展已经进入新的发展时期。改革开放以来，我国经历了世界历史上规模最大、速度最快的城镇化进程，城市发展波澜壮阔，取得了举世瞩目的成就。城市发展带动了整个经济社会发展，城市建设成为现代化建设的重要引擎。城市是我国经济、政治、文化、社会等方面活动的中心，在党和国家工作全局中具有举足轻重的地位。我们要深刻认识城市在我国经济社会发展、民生改善中的重要作用。
+	</div>
+</body>
+</html>

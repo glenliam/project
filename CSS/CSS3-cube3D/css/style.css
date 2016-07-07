@@ -1,0 +1,145 @@
+html {
+	text-align: center;
+}
+
+/*魔方正文部分居中*/
+article {
+	width: 360px;
+	height: 360px;
+	margin: 150px auto;
+}
+
+
+/*设置魔方每一个面的属性*/
+#cube div {
+	position: absolute;
+	height: 360px;
+	width: 360px;
+	border: 3px solid #222;
+}
+
+/*每个面的小块ul和li的整体属性*/
+#cube div ul,li{
+	float: left;
+	list-style-type: none;
+	color: #F7F7F7;
+	padding: 0;
+	margin: 0;
+}
+/*每个面的每一行的属性，每一行是120px高*/
+#cube div ul{
+	width: 360px;
+	height: 120px;
+	line-height: 120px;
+}
+/*每个面的每一小块的属性*/
+#cube div li{
+	height: 116px;
+	width: 116px;
+	border: 2px solid #3E3E3E;
+	font-size: 50px;
+}
+
+/*设置魔方的3D属性*/
+#cube {
+	transform-style: preserve-3d;  /*3D效果*/
+	-webkit-transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+	-o-transform-style: preserve-3d;
+	transform-origin: 180px 180px 0;  /*变形原点位置，每个面设置的长宽都是320px,这里为每个面的中心点*/
+	-webkit-transform-origin: 180px 180px 0;
+	-moz-transform-origin: 180px 180px 0;
+	-o-transform-origin: 180px 180px 0;
+	transform: rotateX(45deg) rotateY(45deg);  /*沿X和Y轴旋转，以显示出立体感*/
+	-webkit-transform: rotateX(45deg) rotateY(45deg);
+	-moz-transform: rotateX(45deg) rotateY(45deg);
+	-o-transform: rotateX(45deg) rotateY(45deg);
+	animation: cube 8s ease-in-out infinite;  /*设置魔方的动画效果，沿着XYZ轴旋转*/
+	-webkit-animation: cube 8s ease-in-out infinite;
+	-moz-animation: cube 8s ease-in-out infinite;
+	-o-animation: cube 8s ease-in-out infinite;
+}
+@keyframes cube {
+	from,
+	to {}
+	16% {
+		transform: rotateY(-45deg);
+		-webkit-transform: rotateY(-45deg);
+		-moz-transform: rotateY(-45deg);
+		-o-transform: rotateY(-45deg);
+	}
+	33% {
+		transform: rotateY(-100deg) rotateZ(200deg);
+		-webkit-transform: rotateY(-100deg) rotateZ(200deg);
+		-moz-transform: rotateY(-100deg) rotateZ(200deg);
+		-o-transform: rotateY(-100deg) rotateZ(200deg);
+	}
+	50% {
+		transform: rotateY(135deg) rotateZ(225deg);
+		-webkit-transform: rotateY(135deg) rotateZ(225deg);
+		-moz-transform: rotateY(135deg) rotateZ(225deg);
+		-o-transform: rotateY(135deg) rotateZ(225deg);
+	}
+	66% {
+		transform: rotateY(225deg) rotateX(190deg);
+		-webkit-transform: rotateY(225deg) rotateX(190deg);
+		-moz-transform: rotateY(225deg) rotateX(190deg);
+		-o-transform: rotateY(225deg) rotateX(190deg);
+	}
+	83% {
+		transform: rotateX(300deg);
+		-webkit-transform: rotateX(300deg);
+		-moz-transform: rotateX(300deg);
+		-o-transform: rotateX(300deg);
+	}
+}
+
+
+/*每一个面的旋转属性，符合立方体的显示效果*/
+#cube .one {
+	transform: translateZ(180px);
+	-webkit-transform: translateZ(180px);
+	-moz-transform: translateZ(180px);
+	-o-transform: translateZ(180px);
+	background-color: rgba(127, 146, 204, 0.9);
+}
+
+#cube .two {
+	transform: rotateX(-90deg) translateZ(180px);
+	-webkit-transform: rotateX(-90deg) translateZ(180px);
+	-moz-transform: rotateX(-90deg) translateZ(180px);
+	-o-transform: rotateX(-90deg) translateZ(180px);
+	background-color: rgba(193, 80, 87, 0.9);
+}
+
+#cube .three {
+	transform: rotateY(90deg) rotateX(90deg) translateZ(180px);
+	-webkit-transform: rotateY(90deg) rotateX(90deg) translateZ(180px);
+	-moz-transform: rotateY(90deg) rotateX(90deg) translateZ(180px);
+	-o-transform: rotateY(90deg) rotateX(90deg) translateZ(180px);
+	background-color: rgba(19, 105, 24, 0.9);
+}
+
+#cube .four {
+	transform: rotateY(180deg) rotateZ(90deg) translateZ(180px);
+	-webkit-transform: rotateY(180deg) rotateZ(90deg) translateZ(180px);
+	-moz-transform: rotateY(180deg) rotateZ(90deg) translateZ(180px);
+	-o-transform: rotateY(180deg) rotateZ(90deg) translateZ(180px);
+	background-color: rgba(254, 142, 63, 0.9);
+}
+
+#cube .five {
+	transform: rotateY(-90deg) rotateZ(90deg) translateZ(180px);
+	-webkit-transform: rotateY(-90deg) rotateZ(90deg) translateZ(180px);
+	-moz-transform: rotateY(-90deg) rotateZ(90deg) translateZ(180px);
+	-o-transform: rotateY(-90deg) rotateZ(90deg) translateZ(180px);
+	background-color: rgba(191, 62, 152, 0.9);
+}
+
+#cube .six {
+	transform: rotateY(90deg) translateZ(180px);
+	-webkit-transform: rotateY(90deg) translateZ(180px);
+	-moz-transform: rotateY(90deg) translateZ(180px);
+	-o-transform: rotateY(90deg) translateZ(180px);
+	background-color: rgba(254, 195, 64, 0.9);
+}
