@@ -1,0 +1,249 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>百度一下，你就知道</title>
+		<style type="text/css">
+			/*设置全局CSS属性*/
+			*{
+				margin: 0px;
+				padding: 0px;
+				height: 100%;
+				z-index: 0;
+			}
+			.relative{
+				position: relative;
+			}
+			.absolute{
+				position: absolute;
+			}
+			/*设置全局CSS属性结束*/
+			
+			/*总体页面*/
+			.content{
+				min-width: 850px;
+				min-height: 600px;
+				font: 13px arial;
+				text-align: left;
+				background: #FFFFFF;
+			}
+			/*总体页面结束*/
+			
+			/*右上角内容*/
+			.head{
+				right: 0;
+				top:20px;
+				height: 25px;
+			}
+			.head a{
+				float: left;
+				color: #333333;
+				font-weight: bold;
+				line-height: 25px;
+				margin-left: 20px;
+				text-decoration: underline;
+			}
+			/*登录和设置超链接不是粗体*/
+			.head a.login{
+				font-weight: normal;
+			}
+			/*最右侧更多产品特殊样式*/
+			.head a.headmore{
+				font-size: 13px;
+				color: #FFFFFF;
+				font-weight: normal;
+				background-color: #38F;
+				height: 25px;
+				text-decoration: none;
+				margin-right: 10px;
+				padding: 0 5px 0 5px;
+			}
+			/*设置超链接访问属性*/
+			.head a:hover{color: #0000cc;}
+			.head a:visited{color: #666666;}
+			.head a.headmore:hover,a.headmore:visited{color: #FFFFFF;}
+			/*右上角内容结束*/
+			
+			/*中间主体部分*/
+			/*百度LOGO图片*/
+			.logo{
+				top:115px;
+				height: 129px;
+				text-align:center;
+			}
+			/*搜索模块整体包括搜索框和搜索按钮*/
+			.search{
+				top:135px;
+				margin: 0 auto;
+				height: 34px;
+				width: 650px;
+			}
+			/*搜索框整体*/
+			.searchfull{
+				overflow: hidden;
+			}
+			/*搜索框文字输入部分*/
+			.searchinput{
+				width: 540px;
+				height: 34px;
+				border: 1px #B6B6B6 solid;
+			}
+			/*搜索框声音按钮部分*/
+			.searchvoice {
+				margin: 0;
+				z-index: 1;
+				top:2px;
+				right: 115px;
+				height: 32px;
+				width: 30px;
+			}
+			/*搜索按钮*/
+			.searchbtn button{
+				font-size: 15px;
+				color: #FFFFFF;
+				letter-spacing: 1px;
+				text-align: center;
+				width: 100px;
+				height: 36px;
+				background: #3385ff;
+				border: 0;
+				cursor: pointer;
+			}
+			/*中间主体部分结束*/
+			
+			/*底部部分*/
+			/*底部模块整体*/
+			.bottom{
+				font-size: 12px;
+				top:500px;
+				height: 50px;
+				width: 650px;
+				margin: 0 auto;
+			}
+			/*底部左侧部分*/
+			.bottomleft{
+				display: inline-block;
+			}
+			/*底部二维码图片属性*/
+			.bottomleft-img{
+				height: 60px;
+				width: 60px;
+				float: left;
+			}
+			/*底部二维码右侧文字属性*/
+			.bottomleft-text{
+				float: left;
+				color: #999;
+				margin: 10px 0 0 10px;
+			}
+			.bottomleft-text p{
+				height: 23px;
+				line-height: 23px;
+			}
+			.bottomleft p b{
+				color: #4c4c4c;
+				font-weight: bold;
+			}
+			/*底部左侧第一个二维码*/
+			.bottomleft1{
+				display: block;
+				float: left;
+			}
+			/*底部左侧第二个二维码设置间距*/
+			.bottomleft2{
+				display: block;
+				float: left;
+				margin-left: 35px;
+			}
+			/*底部右侧部分*/
+			.bottomright{
+				display: inline-block;
+				margin-left: 35px;
+				top:0px;
+			}
+			.bottomright p,p a{
+				color: #272727;
+				height: 23px;
+				line-height: 23px;
+			}
+			.bottomright span,span a{
+				color: #666;
+			}
+			/*工商备案图标*/
+			.bottomright span img{
+				margin-bottom: -2px;
+				width: 14px;
+				height: 17px;
+			}
+			/*底部部分结束*/
+		</style>
+	</head>
+	<body>
+		<div class="content relative">
+			<div class="head absolute">
+				<a href="http://www.nuomi.com/?cid=002540">糯米</a>
+				<a href="http://news.baidu.com/">新闻</a>
+				<a href="http://www.hao123.com/">hao123</a>
+				<a href="http://map.baidu.com/">地图</a>
+				<a href="http://v.baidu.com/">视频</a>
+				<a href="http://tieba.baidu.com/">贴吧</a>
+				<a class="login" href="https://passport.baidu.com/v2/?login&tpl=mn&u=http%3A%2F%2Fwww.baidu.com%2F">登录</a>
+				<a class="login" href="http://www.baidu.com/gaoji/preferences.html">设置</a>
+				<a class="headmore" href="#">更多产品</a>
+			</div>
+			<div class="logo relative">
+				<img alt="百度公司LOGO" src="img/bd_logo1.png" width="270" height="129">
+			</div>
+			<form id="" name="" action="" class="search relative">
+				<span class="searchfull">
+					<input id="" class="searchinput" />
+					<span class="searchvoice absolute">
+						<a href="#">
+							<img src="img/voice.png" alt="使用声音搜索"/>
+						</a>
+					</span>
+				</span>
+				<span class="searchbtn absolute">
+					<button id="" name="">百度一下</button>
+				</span>
+			</form>
+			<div class="bottom relative">
+				<div class="bottomleft">
+					<div class="bottomleft1">
+						<div class="bottomleft-img">
+							<img src="img/qcode1.png" alt="手机百度二维码" />
+						</div>
+						<div class="bottomleft-text">
+							<p><b>手机百度</b></p>
+							<p><span>快人一步</span></p>
+						</div>
+					</div>
+					<div class="bottomleft2">
+						<div class="bottomleft-img">
+							<img src="img/qcode1.png" alt="手机百度二维码" />
+						</div>
+						<div class="bottomleft-text">
+							<p><b>手机百度</b></p>
+							<p><span>快人一步</span></p>
+						</div>
+					</div>
+				</div>
+				<div class="bottomright relative">
+					<p>
+						<a href="https://www.baidu.com/cache/sethelp/help.html">把百度设为主页</a>&nbsp&nbsp
+						<a href="http://home.baidu.com/">关于百度</a>&nbsp&nbsp
+						<a href="http://ir.baidu.com/">About Baidu</a>
+					</p>
+					<p>
+						<span>
+							©2015&nbspBaidu&nbsp
+							<a href="http://www.baidu.com/duty/">使用百度前必读</a>&nbsp
+							<a href="http://jianyi.baidu.com/">意见反馈</a>
+							京ICP证030173号<span class="zheng"><img src="img/zheng.png" alt=""/></span>
+						</span>
+					</p>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
