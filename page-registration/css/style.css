@@ -1,0 +1,80 @@
+/*全局属性*/
+html {
+	margin-top: 10px;
+	margin-bottom: 20px;
+	padding: 0px;
+	background-color: #0D7792;
+}
+td {
+	font-size: 12px;
+	font-family: arial;
+	color: #333333;
+}
+a:link, a:visited {
+	color: #333333;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #CC0000;
+	text-decoration: none;
+}
+
+/*页面水平居中*/
+.con {
+	margin: 0 auto;
+	width: 710px;
+}
+
+/*页眉部分的返回链接样式*/
+.a_back:link, .a_back:visited {
+	color: #0000cc;
+	font-size: 12px;
+	text-decoration: underline;
+}
+
+.a_back:hover {
+	color: #ff0000;
+	font-size: 12px;
+	text-decoration: underline;
+}
+
+/*大标题文字*/
+h1 {
+	font-size: 18px;
+	font-weight: bold;
+}
+
+/*列表分类标题文字*/
+.list_title {
+	font-size: 13px;
+	font-weight: bold;
+	color: #003399;
+	line-height: 150%;
+}
+
+/*表格内的蓝色文字*/
+.blue {
+	color: #0000ff
+}
+
+/*加粗文字样式*/
+.table_text_strong{
+	font-weight: bold;
+}
+
+/*表格顶部两端圆角矩形效果*/
+.table_title {
+	background-color: #FFFFFF;
+	-moz-border-radius: 25px 25px 0 0;
+	-webkit-border-radius: 25px 25px 0 0;
+	border-radius: 25px 25px 0 0;
+}
+
+/*表格底部两端圆角矩形效果*/
+.table_footer {
+	background-color: #FFFFFF;
+	-moz-border-radius: 0 0 25px 25px;
+	-webkit-border-radius: 0 0 25px 25px;
+	border-radius: 0 0 25px 25px;
+}
