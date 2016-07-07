@@ -1,0 +1,18 @@
+/*每个图片盒子样式*/
+.box{
+	position: relative;
+	float: left;
+}
+/*盒子内容样式*/
+.content{
+	padding: 8px;
+	margin: 4px;
+	border: 1px solid #C2A48F;
+	box-shadow: 0 0 5px #C2987A;
+	border-radius: 5px;
+}
+/*图片样式*/
+.content img{
+	width: 190px;
+	height: auto;
+}
