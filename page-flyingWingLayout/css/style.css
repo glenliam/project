@@ -1,0 +1,70 @@
+/*设置全局CSS属性*/
+html, body {
+	margin: 0;
+	padding: 0;
+	font: 16px arial;
+	text-align: center;
+}
+/*设置全局CSS属性结束*/
+
+/*设置头部部分*/
+header{
+	height: 70px;
+	line-height: 70px;
+	color: #FFFFFF;
+	font-size: 24px;
+	background: #073279;
+}
+/*设置内容部分*/
+article{
+	height: 400px;
+	background: #D6D4D5;
+}
+/*设置尾部版权信息*/
+footer{
+	height: 40px;
+	line-height: 40px;
+	color: #FFFFFF;
+	background: #001B48;
+	font-size: 12px;
+	
+}
+/*设置主栏左侧部分*/
+article .left{
+	float: left;
+	width: 200px;
+	height: 392px;
+	line-height: 392px;
+	background: #4E82B6;
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+	border-radius: 8px;
+	margin: 4px 0 0 -100%;
+}
+/*设置主栏右侧部分*/
+article .right{
+	width: 150px;
+	height: 392px;
+	line-height: 392px;
+	float: right;
+	background: #4EB69C;
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+	border-radius: 8px;
+	margin: 4px 0 0 -150px;
+	
+}
+/*设置主栏部分*/
+article .wrapper{
+	float: left;
+	width: 100%;
+}
+article .wrapper .center{
+	height: 392px;
+	line-height: 392px;
+	background: #F0EDF0;
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+	border-radius: 8px;
+	margin: 4px 156px 0 206px;/*与顶部有4px距离，左右侧各6px距离*/
+}
