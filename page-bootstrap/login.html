@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<title>Bootstrap后台管理系统登录页</title>
+		<link rel="stylesheet" href="css/bootstrap.css" />
+		<link rel="stylesheet" href="css/login.css" />
+		<!--[if lt IE 9]>
+      	<script src="js/html5.js"></script>
+    		<![endif]-->
+	</head>
+
+	<body>
+		<div class="container">
+			<div class="login-form">
+				<h3>Bootstrap后台管理系统</h3>
+				<form class="form-horizontal">
+					<div class="form-group">
+						<div class="col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3 col-xs-12">
+							<div class="input-group">
+								<span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
+								<!--可阅读性隐藏标签-->
+								<label for="username" class="sr-only">用户名</label>
+								<input type="email" id="username" name="username" class="form-control" placeholder="用户名">
+							</div>
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3 col-xs-12">
+							<div class="input-group">
+								<span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
+								<label for="password" class="sr-only">密码</label>
+								<input type="password" id="password" name="password" class="form-control" placeholder="密码">
+							</div>
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3 col-xs-12">
+							<div class="checkbox">
+								<label>
+									<input type="checkbox" id="remember" name="remember"> 记住我
+								</label>
+							</div>
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3 col-xs-12">
+							<button type="submit" class="btn btn-success btn-lg btn-block">登 录</button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</body>
+
+</html>
