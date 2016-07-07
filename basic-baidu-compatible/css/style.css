@@ -1,0 +1,292 @@
+/*设置全局CSS属性*/
+* {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	z-index: 0;
+	_behavior: url(css/csshover.htc); /*让IE6支持hover伪类*/
+}
+/*设置全局CSS属性结束*/
+
+
+/*总体页面*/
+.content {
+	position: relative;
+	min-width: 850px;
+	min-height: 600px;
+	font: 13px arial;
+	text-align: left;
+	background-color: #FFFFFF;
+}
+/*总体页面结束*/
+
+
+/*右上角内容*/
+header {
+	position: absolute;
+	right: 0;
+	top: 20px;
+	height: 25px;
+}
+
+header a {
+	float: left;
+	color: #333333;
+	font-weight: bold;
+	line-height: 25px;
+	margin-left: 20px;
+	text-decoration: underline;
+}
+
+
+/*登录和设置超链接不是粗体*/
+header a.login {
+	font-weight: normal;
+}
+
+
+/*最右侧更多产品特殊样式*/
+header a.headmore {
+	font-size: 13px;
+	color: #FFFFFF;
+	font-weight: normal;
+	background-color: #38F;
+	height: 25px;
+	text-decoration: none;
+	margin-right: 10px;
+	padding: 0 5px 0 5px;
+}
+
+
+/*设置超链接访问属性*/
+header a:hover {
+	color: #0000cc;
+}
+
+header a:visited {
+	color: #666666;
+}
+
+header a.headmore:hover,
+a.headmore:visited {
+	color: #FFFFFF;
+}
+/*右上角内容结束*/
+
+
+/*中间主体部分*/
+article {
+	position: relative;
+	bottom: -100px;
+	height: 200px;
+}
+
+
+/*百度LOGO图片*/
+.logo {
+	position: relative;
+	top: 0;
+	height: 129px;
+	text-align: center;
+}
+
+
+/*搜索模块整体包括搜索框和搜索按钮*/
+.search {
+	position: relative;
+	top: 25px;
+	margin: 0 auto;
+	height: 34px;
+	width: 650px;
+}
+
+
+/*搜索框整体*/
+.searchfull {
+	overflow: hidden;
+}
+
+
+/*搜索框文字输入部分*/
+.searchinput {
+	display: inline-block;
+	position: relative;
+	float: left;
+	width: 530px;
+	height: 34px;
+	line-height: 34px;
+	color: #333;
+	border: 1px #b6b6b6 solid;
+	border-color:#b8b8b8 transparent #ccc #b8b8b8;
+	_border-color:#b8b8b8 #FFFFFF #ccc #b8b8b8; /*解决IE6不支持边框右侧的透明色*/
+	_filter:chroma(color=#FFFFFF); /*解决IE6不支持边框右侧的透明色*/
+	font-size: 16px;
+	outline: none;
+	padding-left: 10px;
+}
+.searchinput:hover{
+	border-color: #999 transparent #b3b3b3 #999;
+	_border-color: #999 #FFFFFF #b3b3b3 #999;/*解决IE6不支持边框右侧的透明色*/
+	_filter:chroma(color=#FFFFFF);
+}
+.searchinput:focus{
+	border-color: #4791ff transparent #4791ff #4791ff;
+	_border-color: #4791ff #FFFFFF #4791ff #4791ff;/*解决IE6不支持边框右侧的透明色*/
+	_filter:chroma(color=#FFFFFF);
+}
+
+/*搜索框声音按钮部分*/
+.searchvoice {
+	position: absolute;
+	margin: 0;
+	z-index: 1;
+	top: 2px;
+	right: 110px;
+	height: 32px;
+	width: 30px;
+	background: url(../img/voice.png) no-repeat center;
+	background-size: 25px 25px;
+	cursor: pointer;
+}
+
+.searchvoice:hover {
+	background-image: url(../img/voice-hover.png);
+}
+
+
+/*搜索按钮*/
+.searchbtn {
+	+display: inline-block;
+	position: relative;
+	float: left;
+	font-size: 15px;
+	color: #FFFFFF;
+	letter-spacing: 1px;
+	text-align: center;
+	width: 100px;
+	height: 36px;
+	background-color: #3385ff;
+	border: 0;
+	border-bottom: 1px solid #2d78f4;
+	+border-bottom: 0; /*解决IE6-7只设置bottom异常*/
+	cursor: pointer;
+	outline: medium;
+}
+.searchbtn:hover{
+	background-color: #317ef3;
+	border-bottom: 1px solid #2868c8;
+	_border: 0; /*解决IE6边框出现白色内阴影*/
+	-moz-box-shadow: 1px 1px 1px #ccc;
+	-webkit-box-shadow: 1px 1px 1px #ccc;
+	box-shadow: 1px 1px 1px #ccc;
+	behavior:url(css/pie.htc); /*htc文件相对于html文件，注意路径*/
+}
+.searchbtn:focus{
+	background-color: #3075dc;
+	-moz-box-shadow: inset 1px 1px 5px #2964bb;
+	-webkit-box-shadow: inset 1px 1px 5px #2964bb;
+	box-shadow: inset 1px 1px 5px #2964bb;
+	behavior:url(css/pie.htc); /*使得IE6-8支持CSS3属性*/
+}
+/*中间主体部分结束*/
+
+
+/*底部部分*/
+/*底部模块整体*/
+footer {
+	position: absolute;
+	bottom: 90px;
+	font-size: 12px;
+	height: 50px;
+	width: 100%;
+	margin: 0 auto;
+}
+
+
+/*底部居中设置*/
+.bottomwr {
+	+width: 670px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+
+/*底部左侧部分*/
+.bottomleft {
+	display: inline-block;
+	+float: left; /*修复IE6-7下排版错位*/
+}
+
+/*底部右侧部分*/
+.bottomright {
+	display: inline-block;
+	position: relative;
+	top: 0;
+	margin-left: 35px;
+	text-align: left;
+	+float: left; /*修复IE6-7下排版错位*/
+}
+
+/*底部二维码图片属性*/
+.bottomleft-img {
+	height: 60px;
+	width: 60px;
+	float: left;
+}
+
+
+/*底部二维码右侧文字属性*/
+.bottomleft-text {
+	_width: 60px; /*修复IE6下显示异常*/
+	float: left;
+	color: #999;
+	margin: 10px 0 0 10px;
+}
+
+.bottomleft-text p {
+	height: 23px;
+	line-height: 23px;
+}
+
+.bottomleft p b {
+	color: #4c4c4c;
+	font-weight: bold;
+}
+
+
+/*底部左侧第一个二维码*/
+.bottomleft1 {
+	display: block;
+	float: left;
+}
+
+
+/*底部左侧第二个二维码设置间距*/
+.bottomleft2 {
+	display: block;
+	float: left;
+	margin-left: 35px;
+}
+
+.bottomright p, p a {
+	color: #272727;
+	height: 23px;
+	line-height: 23px;
+}
+
+.bottomright p.bottomp{
+	+padding-top: 10px; /*修复IE6-7文字偏上*/
+}
+
+.bottomright span,
+span a {
+	color: #666;
+}
+
+/*工商备案图标*/
+.bottomright span img {
+	margin-bottom: -2px;
+	width: 14px;
+	height: 17px;
+}
+/*底部部分结束*/
