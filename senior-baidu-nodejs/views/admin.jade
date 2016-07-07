@@ -1,0 +1,101 @@
+doctype
+html
+  head
+    meta(http-equiv='Content-Type', content='text/html; charset=utf-8')
+    title Nodejs百度新闻后台管理页
+    link(rel='stylesheet', type='text/css', href='/css/bootstrap.min.css')
+    link(rel='stylesheet', type='text/css', href='/css/admin.css')
+  body
+    .container
+      table.table.table-bordered
+        tbody
+          tr
+            td.navs(width='101', rowspan='6')
+              ul#navAll
+                a(href='#')
+                  img.img-circle(src='/img/avatar.png', alt='logo')
+                  p 宇诚
+                li
+                  a(href='/newsindex') 查看主页
+                li#navRec.tabon(value='navRec') 推荐
+                li#navFam(value='navfam') 百家
+                li#navLocal(value='navLocal') 本地
+                li#navImg(value='navImg') 图片
+            // 顶部
+            td.msn(height='50')(colspan='2')
+              Nodejs百度新闻后台管理页
+          tr
+            td(colspan='2')
+              a(href='/newsindex') 查看新闻主页
+          // 添加新闻
+          tr
+            td
+              form#form1(name='form1', method='post')
+                input#newssort.newtype.form-control.input-sm(type='text', readonly='', name='newssort')
+                h7
+                  label(for='newtype') 类型：
+                //- input#newstype.newtype.form-control.input-sm(type='text', name='newstype')
+                select#newstype.newtype.form-control.input-sm(name='newstype')
+                  option(value='slide') 焦点图
+                  option(value='hot') 滚播
+                  option(value='newslist') 列表新闻
+                h7
+                  label(for='newtitle') 标题：
+                input#newstitle.newtitle.form-control.input-sm(type='text', name='newstitle')
+                h7
+                  label(for='newfrom') 来源：
+                input#newsfrom.newfrom.form-control.input-sm(type='text', name='newsfrom')
+                h7
+                  label(for='newImg') 图片：
+                input#newsimg.newImg.form-control.input-sm(type='text', name='newsimg')
+                h7
+                  label(for='newcontent') 新闻内容：
+                textarea#newscontent.newcontent.form-control.input-sm(name='newscontent')
+                input#smbtn.btn.btn-primary.btn-sm.btn-block(type='submit', name='smbtn', value='增加新闻')
+                input#csrf(type='hidden', name='_csrf', value='#{csrfToken}')
+              td.addnews
+          tr(rowspan='2')
+            td(colspan='2')
+          // 管理新闻
+          tr
+            td(colspan='2')
+              .adminCon
+                table.admanage.table-bordered.table-condensed
+                  thead
+                    tr.bg-info
+                      td.col-md-1.text-center ID
+                      td.col-md-1.text-center 类型
+                      td.col-md-2.text-center 标题
+                      td.col-md-1.text-center 图片
+                      td.col-md-2.text-center 来源
+                      td.col-md-2.text-center 新闻内容
+                      td.col-md-1.text-center 时间
+                      td.col-md-2.text-center 管理
+                  // 导入数据库
+                  tbody#adminContent
+                // 修改部分
+                .resetfrom.mhide
+                  form(name='form2', method='post')
+                    input#resetsort.form-control.mhide(type='text', value='')
+                    .form-group
+                      label(for='resetid') 编号:
+                      input#resetid.form-control(type='text', readonly='', value='')
+                    .form-group
+                      select#resettype.form-control.input-sm
+                        option(value='slide') 焦点图
+                        option(value='hot') 滚播
+                        option(value='newslist') 列表新闻
+                    .form-group
+                      input#resettitle.form-control.input-sm(type='text', placeholder='标题')
+                    .form-group
+                      input#resetfrom.form-control.input-sm(type='text', placeholder='来源')
+                    .form-group
+                      input#resetdate.form-control.input-sm(type='date', placeholder='时间')
+                    .form-group
+                      input#resetimg.form-control.input-sm(type='text', placeholder='图片')
+                    .form-group
+                      textarea#resetcontent.form-control.input-sm(placeholder='新闻内容')
+                    .form-group
+                      input#resetsbm.form-control.input-sm.btn-primary(type='submit', value='修改')
+    script(type='text/javascript', src='/js/jquery-2.1.4.min.js')
+    script(type='text/javascript', src='/js/admin.js')

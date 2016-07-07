@@ -1,0 +1,70 @@
+doctype
+html
+  head
+    meta(name='viewport', content='width=device-width,initial-scale=1')
+    meta(http-equiv='Content-Type', content='text/html; charset=utf-8')
+    title 百度新闻手机版
+    //引用CSS文件
+    link(rel='stylesheet', type='text/css', href='/css/news.css')
+  body
+    //头部
+    .header
+      //顶部栏目
+      .headTop
+        //百度logo
+        .slogo
+        //人物图标
+        .user
+        //加号图标
+        .more
+        //搜索按钮
+        .search
+      //分割线
+      .divider
+      //分类栏目
+      .headNavs
+        ul
+          li#navRec.navon(value='navRec') 推荐
+          li#navFam(value='navFam')
+            b
+            | 百家
+          li#navLocal(value='navLocal')
+            b
+            | 本地
+          li#navImg(value='navImg')
+            b
+            | 图片
+    //内容部分
+    .mainer
+      //幻灯片新闻
+      .mainBan
+        .banCon
+        | 		
+        .banTab
+          span.banTabOn
+          span
+          span
+      //热点新闻
+      .mainHot
+        .hotLeft 热点
+        #hotRight
+          ul
+      //列表新闻
+      .mainCon
+        ul#mainContent
+    //底部内容
+    .footer
+      span.footReturn
+        i
+        | 意见反馈
+      span.footPut
+        b
+        i
+        | 应用推荐
+      span.footDown
+        b
+        i
+        | 客户端
+    //引用JS文件
+    script(type='text/javascript', src='/js/jquery-2.1.4.min.js')
+    script(type='text/javascript', src='/js/news.js')
