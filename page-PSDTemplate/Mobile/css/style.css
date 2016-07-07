@@ -1,0 +1,282 @@
+/*设置全局CSS属性*/
+html{
+	font-size: 62.5%;
+	font-family:Tahoma,Arial,Roboto,”Droid Sans”,”Helvetica Neue”,”Droid Sans Fallback”,”Heiti SC”,sans-self;
+}
+body {
+	width: 100%;
+	font-size: 1.4rem;
+	margin: 0;
+	padding: 0;
+	text-align: left;
+	background: #E5E5E5;
+}
+.hr0{
+	height:0.2rem;border:none;border-top: 0.2rem solid #E5E5E5;
+}
+a{
+	text-decoration: none;
+	color: #303030;
+}
+a:hover{
+	color: #E2743E;
+}
+ul{list-style:none;}
+
+/*设置外容器的属性，固定宽度，上下有距离的居中，有内边距32px，背景颜色白色*/
+.contariner{
+	width: 80%;
+	margin: 1.5rem auto;
+	padding: 0 1rem 0 1rem;
+	background: #FFFFFF;
+}
+/*设置头部部分*/
+header{
+	height: 6rem;
+}
+header .wr{
+	width: 100%;
+	padding: 1.5rem 0 0 0.5rem;
+}
+/*LOGO*/
+header .wr .logo{
+	float: left;
+	width: 2rem;
+}
+/*登录和购物车*/
+header .wr .box{
+	float: right;
+	width: 8rem;
+	padding: 0.7rem 0 0 0;
+	}
+header .wr .box a{
+	display: inline-block;
+	}
+header .wr .box section{
+	display: inline-block;
+	width: 2.8rem;
+	margin-left: 2rem;
+	transition: all 0.25s;
+}
+/*点击菜单按钮弹出菜单层*/
+	#tm {
+		display: none;
+	}
+	.sidenav {
+		opacity: 0;
+		background: #BD5E00;
+		width: 40%;
+		height: 70%;
+		position: absolute;
+		left: 0;
+		top: 0;
+		padding-top: 10%;
+	}
+	.sidenav li {
+		list-style-type: none;
+	}
+	.sidenav a {
+		color: white;
+		text-decoration: none;
+	}
+	.sidenav b {
+		display: block;
+	}
+	.sidenav i {
+		display: block;
+		width: 10%;
+		float: left;
+		font-size: 2rem;
+		line-height: 5rem;
+		text-align: center;
+	}
+	#tm:checked ~ section {
+		color: #E47435;
+	}
+	#tm:checked ~ .sidenav {
+		opacity: 1;
+		transition: All 1s ease;
+		-webkit-transition: All 1s ease;
+	}
+/*设置内容部分*/
+article{
+	height: 100%;
+	width: 100%;
+}
+/*广告文字部分*/
+article .slider{
+	text-align: center;
+}
+article .slider h1{
+	font-size: 5rem;
+	font-weight: normal;
+	line-height: 5rem;
+	letter-spacing: 0.5rem;
+	font-variant: small-caps;
+	color: #303030;
+	margin: 1.4rem 0 0 0;
+}
+article .slider h2{
+	font-size: 1.4rem;
+	line-height: 2rem;
+	font-style:italic;
+	font-weight: normal;
+	letter-spacing: 0.1rem;
+	color: #606060;
+	margin: 1.4rem 0 0 0;
+}
+
+/*商品展示部分*/
+article .squares{
+	margin: 2rem auto;
+	width: 95%;
+}
+article .squares ul{
+	padding: 0;
+	margin: 0;
+}
+article .squares ul li{
+	height: 15rem;
+	line-height: 15rem;
+	text-align: center;
+}
+article .squares ul li.bgcolor76{
+	background: #767676;
+}
+article .squares ul li.bgcolor60{
+	background: #606060;
+}
+article .squares ul li a{
+	color: #ffffff;
+	display: inline-block;
+	line-height: 2rem;
+}
+article .squares ul li a:hover,article .squares ul li a:active{
+	color: #BD5E00;
+}
+/*输入邮箱部分*/
+article .emailus{
+	text-align: center;
+	color: #606060;
+	margin-top: 2rem;
+}
+/*标题文字*/
+article .emailus h3{
+	line-height: 3.4rem;
+	font-size: 3.4rem;
+	font-weight: normal;
+	font-variant: small-caps;
+	color: #303030;
+}
+article .emailus h4{
+	line-height: 1.8rem;
+	font-size: 1.4rem;
+	font-style:italic;
+	font-weight: normal;
+	letter-spacing: 0.1rem;
+}
+
+/*输入邮箱部分*/
+article .emailus .emailwr{
+	margin: 2rem auto 0.4rem auto;
+	width: 95%;
+}
+/*输入邮箱输入框*/
+article .emailus .emailwr .emailinput {
+	float: left;
+	width: 70%;
+	height: 5.6rem;
+	color: #606060;
+	border: 0.1rem #959595 solid;
+	border-color:#959595 transparent #959595 #959595;
+	font-size: 1.4rem;
+	outline: none;
+	text-indent: 1.4rem;
+	font-style:italic;
+	-webkit-appearance : none;/*解决IOS上safari圆角问题*/
+}
+article .emailus .emailwr .emailinput:hover{
+	border-color: #6A6A6A transparent #6A6A6A #6A6A6A;
+}
+article .emailus .emailwr .emailinput:focus{
+	border-color: #E47435 transparent #E47435 #E47435;
+}
+/*输入邮箱的提交按钮*/
+article .emailus .emailwr .emailbtn {
+	float: left;
+	font-size: 1.3rem;
+	color: #FFFFFF;
+	letter-spacing: 0.1rem;
+	text-align: center;
+	width: 28%;
+	height: 6rem;
+	background-color: #F48240;
+	border: 0;
+	border: 0.1rem solid #E47435;
+	cursor: pointer;
+	outline: medium;
+	-webkit-appearance : none;/*解决IOS上safari圆角问题*/
+}
+article .emailus .emailwr .emailbtn:hover{
+	background-color: #E47435;
+	border-bottom: 0.1rem solid #E96B2C;
+	box-shadow: 0.1rem 0.1rem 0.1rem #ccc;
+}
+article .emailus .emailwr .emailbtn:focus{
+	background-color: #E96B2C;
+	box-shadow: inset 0.1rem 0.1rem 0.5rem #362F2D;
+}
+
+/*底部上册的广告图片*/
+article .ad{
+	width: 100%;
+	height: 22rem;
+	margin: 10rem 2% 0 2%;
+}
+article .ad ul{
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 10rem;
+}
+article .ad ul li{
+	float: left;
+	text-align: left;
+	width: 46%;
+	height: 10rem;
+	border: 0.1rem solid #ffffff;
+}
+article .ad ul li.bgcolorbb
+{
+	background: #BBBBBB;
+}
+
+/*设置底部*/
+footer{
+	height: 100%;
+	padding-bottom: 2rem;
+}
+footer .wr{
+	padding: 2rem 0 0 0;
+	text-align: center;
+}
+footer .wr p{
+	font-size: 1.4rem;
+	letter-spacing: 0.1rem;
+	line-height: 1.2rem;
+}
+footer .wr p.ptitle{
+	font-size: 2.2rem;
+	line-height: 2rem;
+	padding: 0 0 1rem 0;
+}
+/*底部社交工具样式*/
+footer .wr .fsocial a{
+	display: inline-block;
+	font-size: 2rem;
+	width: 2.5rem;
+	height: 2.5rem;
+	line-height: 2.2rem;
+	margin: 2rem 2rem 0 0;
+	border: 0.1rem solid #303030;
+}
