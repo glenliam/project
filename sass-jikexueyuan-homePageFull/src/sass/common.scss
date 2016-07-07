@@ -1,0 +1,49 @@
+
+// 背影颜色
+$bgColor: #fff;
+
+a, dd, div, dl, i, img, input, li, p, span, ul {
+	box-sizing: border-box;
+}
+
+body {
+	background: $bgColor;
+}
+
+.container {
+	width: 1000px;
+	margin: 0 auto;
+}
+
+/** 左浮动 **/
+.fl {
+	float: left;
+}
+
+/** 右浮动 **/
+.fr {
+	float: right;
+}
+
+/**
+* 闭合浮动
+* @Author: 一丝
+* @Doc: http://nicolasgallagher.com/micro-clearfix-hack/
+*/
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+.clearfix {
+  *zoom: 1;
+  /* IE6-7 触发 hasLayout */
+}
+
+
+
